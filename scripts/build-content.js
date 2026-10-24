@@ -3,6 +3,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { makeLinker, references } from '../lib/links.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DECKS = ['facade', 'interior', 'styles', 'materials', 'lingo', 'architects'];
@@ -15,13 +16,24 @@ const terms = decks.flatMap(d => d.terms.map(t => {
   return { ...rest, deck: d.id, img, credit: img ? credits[t.id] || null : null };
 }));
 
-// Introduction order: round-robin across decks so early days mix exterior, interior and styles.
+// Introduction order: round-robin across decks so early days mix exterior, interior and styles,
+// except that the terms a card's text relies on (Federal -> Flemish bond, dormer, fanlight) come
+// just before it. One level only, so a building block never drags in the styles it mentions.
+const linkify = makeLinker(terms);
+const byId = Object.fromEntries(terms.map(t => [t.id, t]));
 const order = [];
+const placed = new Set();
+const place = id => { if (!placed.has(id)) { placed.add(id); order.push(id); } };
 const queues = decks.map(d => d.terms.map(t => t.id));
-while (queues.some(q => q.length)) for (const q of queues) if (q.length) order.push(q.shift());
+while (queues.some(q => q.length)) for (const q of queues) if (q.length) {
+  const id = q.shift();
+  if (placed.has(id)) continue;
+  references(byId[id], linkify).forEach(place);
+  place(id);
+}
 
 const files = ['./', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png',
-  'lib/store.js', 'lib/srs.js', 'lib/cards.js', 'lib/vendor/ts-fsrs.mjs', 'content/index.json',
+  'lib/store.js', 'lib/srs.js', 'lib/cards.js', 'lib/links.js', 'lib/vendor/ts-fsrs.mjs', 'content/index.json',
   ...terms.filter(t => t.img).map(t => t.img)];
 
 const version = new Date().toISOString();

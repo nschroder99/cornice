@@ -167,3 +167,23 @@ body.reviewing .wrap { padding-bottom: 200px; }
 .tabs a.on { color: var(--accent); }
 .tabs svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linejoin: round; stroke-linecap: round; }
 .toast { position: fixed; left: 50%; bottom: calc(var(--tabs-h) + 20px); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 999px; font-size: .88rem; font-weight: 500; z-index: 10; }
+
+/* Linked terms inside definitions, and the pop-up sheet they open */
+.tlink { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-style: dotted; text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+.tlink:hover, .tlink:focus-visible { color: var(--accent); outline: none; }
+.sheet-wrap { position: fixed; inset: 0; z-index: 20; background: rgba(0,0,0,.35); display: flex; align-items: flex-end; justify-content: center; animation: fade .15s; }
+.sheet { width: 100%; max-width: 560px; max-height: 82vh; overflow: auto; background: var(--card); border-radius: 20px 20px 0 0; padding-bottom: env(safe-area-inset-bottom); box-shadow: 0 -8px 30px rgba(0,0,0,.15); animation: rise .2s ease-out; }
+.sheet img { width: 100%; max-height: 34vh; object-fit: cover; }
+.sheet .body { padding: 18px 20px 20px; }
+.sheet .term { font: 500 1.6rem/1.1 var(--serif); margin: 0 0 6px; }
+.sheet .era { font: italic 400 1rem var(--serif); color: var(--muted); margin: -2px 0 8px; }
+.sheet .def { margin: 0 0 8px; }
+.sheet .spot { color: var(--muted); margin: 0; }
+.sheet-actions { display: flex; gap: 8px; margin-top: 16px; }
+.sheet-actions .btn { flex: 1; }
+@keyframes rise { from { transform: translateY(40px); opacity: 0; } }
+@keyframes fade { from { opacity: 0; } }
+.sortlink { display: block; margin: 12px 0 0; padding: 14px 16px; border: 1px dashed var(--line); border-radius: 14px; text-decoration: none; color: var(--ink); background: var(--card); }
+.sortlink b { display: block; font-weight: 600; }
+.sortlink span { display: block; color: var(--muted); font-size: .86rem; margin-top: 2px; }
+.session-top .link:disabled { opacity: .35; }

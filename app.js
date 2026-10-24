@@ -1,6 +1,7 @@
 import * as db from './lib/store.js';
 import { newCard, rate, preview, humanInterval, isLearned, Rating, State } from './lib/srs.js';
 import { buildPrompt, buildQueue } from './lib/cards.js';
+import { makeLinker } from './lib/links.js';
 
 const app = document.getElementById('app');
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -9,7 +10,7 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': 
 const dict = (entries = []) => Object.assign(Object.create(null), Object.fromEntries(entries));
 const dayKey = d => { const x = new Date(d); return `${x.getFullYear()}-${x.getMonth() + 1}-${x.getDate()}`; };
 
-let content, cards = dict(), journal = [], photos = dict();
+let content, cards = dict(), journal = [], photos = dict(), linkify;
 const urls = new Map(); // journal blob -> object URL, made once
 
 function blobURL(blob) {
@@ -22,6 +23,7 @@ async function load() {
   content.byId = dict(content.terms.map(t => [t.id, t]));
   content.byDeck = dict(content.decks.map(d => [d.id, content.terms.filter(t => t.deck === d.id)]));
   content.deckName = dict(content.decks.map(d => [d.id, d.name]));
+  linkify = makeLinker(content.terms);
   await refresh();
 }
 
@@ -43,7 +45,7 @@ async function stats() {
   if (!days.has(dayKey(d))) d.setDate(d.getDate() - 1); // today not done yet doesn't break the streak
   while (days.has(dayKey(d))) { streak++; d.setDate(d.getDate() - 1); }
   const today = dayKey(new Date());
-  const introducedToday = Object.values(cards).filter(c => dayKey(c.introduced) === today).length;
+  const introducedToday = Object.values(cards).filter(c => !c.sorted && dayKey(c.introduced) === today).length;
   const reviewedToday = log.filter(l => dayKey(l.at) === today).length;
   return { streak, introducedToday, reviewedToday };
 }
@@ -52,6 +54,37 @@ async function queue() {
   const { introducedToday } = await stats();
   return buildQueue({ content, cards, now: new Date(), newPerDay: await db.getSetting('newPerDay', 5), introducedToday, priority: await db.getSetting('priority', []) });
 }
+
+// Definition text with other glossary terms as tappable words; `used` keeps it to one link per term per card.
+const rich = (text, selfId, used) => linkify(text, selfId, used)
+  .map(s => s.id ? `<button type="button" class="tlink" data-term="${esc(s.id)}">${esc(s.text)}</button>` : esc(s.text)).join('');
+const defAndSpot = (t, skipDef = false) => {
+  const used = new Set();
+  return `${skipDef ? '' : `<p class="def">${rich(t.def, t.id, used)}</p>`}<p class="spot">${rich(t.spot, t.id, used)}</p>`;
+};
+
+// A tapped term opens a sheet over whatever you're doing, so a review session isn't lost.
+function openSheet(id) {
+  const t = content.byId[id];
+  if (!t) return;
+  document.querySelector('.sheet-wrap')?.remove();
+  const wrap = document.createElement('div');
+  wrap.className = 'sheet-wrap';
+  const reviewing = document.body.classList.contains('reviewing');
+  wrap.innerHTML = `<div class="sheet" role="dialog" aria-label="${esc(t.term)}">
+    ${t.img ? `<img src="${esc(t.img)}" alt="">` : ''}
+    <div class="body"><p class="term">${esc(t.term)}</p>${t.era ? `<p class="era">${esc(t.era)}</p>` : ''}
+      ${defAndSpot(t)}
+      <div class="sheet-actions">${reviewing ? '' : `<a class="btn" href="#/term/${esc(t.id)}">Open card</a>`}<button class="btn primary" data-close>Close</button></div>
+    </div></div>`;
+  wrap.addEventListener('click', e => { if (e.target === wrap || e.target.closest('[data-close]') || e.target.closest('a')) wrap.remove(); });
+  document.body.append(wrap);
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('.tlink');
+  if (b) { e.preventDefault(); openSheet(b.dataset.term); }
+});
+addEventListener('hashchange', () => document.querySelector('.sheet-wrap')?.remove());
 
 function toast(msg) {
   const el = document.createElement('div');
@@ -66,6 +99,7 @@ const credit = t => t.credit ? `<p class="credit">Photo: <a href="${esc(t.credit
 /* ---------- Today ---------- */
 
 async function viewToday() {
+  const seq = navSeq;
   const q = await queue();
   const s = await stats();
   const nNew = q.filter(x => x.isNew).length, nDue = q.length - nNew;
@@ -76,6 +110,8 @@ async function viewToday() {
     return `<li><span>${esc(d.name)}</span><span class="n">${learned} / ${total}</span><div class="track"><div class="fill" style="width:${(learned / total) * 100}%"></div></div></li>`;
   }).join('');
   const nextDue = Object.values(cards).map(c => new Date(c.card.due)).filter(d => d > new Date()).sort((a, b) => a - b)[0];
+  const unsorted = (await sortQueue()).length;
+  if (stale(seq)) return;
   app.innerHTML = `
     <header class="top"><p class="eyebrow">${new Date().toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' })}</p><h1>Cornice</h1></header>
     ${standalone ? '' : `<p class="banner"><b>Add to Home Screen</b> so your progress and photos are kept: tap Share, then “Add to Home Screen”.</p>`}
@@ -90,6 +126,7 @@ async function viewToday() {
         <p class="muted">${nextDue ? `Next card in ${humanInterval(nextDue)}.` : 'Nothing due.'} Go spot something.</p>
         <a class="btn block" href="#/journal/new">Add a sighting</a>`}
     </section>
+    ${unsorted ? `<a class="sortlink" href="#/sort"><b>Already know some of these?</b><span>Sort the terms you’re confident on so reviews focus on the rest · ${unsorted} to go</span></a>` : ''}
     <div class="stats">
       <div class="stat"><b>${s.streak}</b><span>day streak</span></div>
       <div class="stat"><b>${Object.values(cards).filter(c => isLearned(c.card)).length}</b><span>learned</span></div>
@@ -102,7 +139,9 @@ async function viewToday() {
 /* ---------- Review ---------- */
 
 async function viewReview() {
+  const seq = navSeq;
   let q = await queue();
+  if (stale(seq)) return;
   const total = q.length;
   let doneCount = 0;
   if (!q.length) return viewToday();
@@ -152,7 +191,7 @@ async function viewReview() {
   const photoBlock = p => p ? `<div class="photo"><img src="${esc(p.src)}" alt="">${p.mine ? `<span class="cap">${esc(p.caption)}</span>` : ''}</div>` : '';
   const reveal = (t, p, skipDef = false) => `
     <p class="term">${esc(t.term)}</p>${t.era ? `<p class="era">${esc(t.era)}</p>` : ''}
-    ${skipDef ? '' : `<p class="def">${esc(t.def)}</p>`}<p class="spot">${esc(t.spot)}</p>
+    ${defAndSpot(t, skipDef)}
     <div class="ex"><span class="eyebrow">In New York</span><ul>${t.ex.map(e => `<li>${esc(e)}</li>`).join('')}</ul></div>
     ${t.confuse?.length ? `<p class="small muted">Don’t confuse with ${t.confuse.map(id => esc(content.byId[id]?.term)).join(', ')}.</p>` : ''}
     ${!p || !p.mine ? credit(t) : ''}`;
@@ -183,7 +222,7 @@ async function viewReview() {
     if (p.kind === 'recall') {
       app.innerHTML = `${top()}<article class="card">${photoBlock(p.photo)}<div class="body">
         <p class="ask">${p.photo ? (t.deck === 'architects' ? 'Who designed this?' : t.deck === 'styles' ? 'What style is this?' : 'What’s this called?') : 'Name the term'}</p>
-        ${p.photo ? '' : `<p class="def">${esc(t.def)}</p>`}
+        ${p.photo ? '' : `<p class="def">${rich(t.def, t.id)}</p>`}
         <div id="ans"></div></div></article>`;
       single('Show answer', () => {
         document.getElementById('ans').innerHTML = reveal(t, p.photo, !p.photo);
@@ -258,6 +297,81 @@ function viewDeck(id) {
   app.innerHTML = `<a class="back" href="#/glossary">‹ Glossary</a>
     <header class="top" style="padding-top:6px"><p class="eyebrow">${terms.length} terms</p><h1>${esc(content.deckName[id])}</h1></header>
     <ul class="list">${terms.map(termRow).join('')}</ul>`;
+  const seq = navSeq;
+  sortQueue(id).then(q => { if (q.length && !stale(seq)) app.querySelector('header.top').insertAdjacentHTML('afterend', `<a class="btn block" href="#/sort/${esc(id)}" style="margin-bottom:12px">Sort what I already know · ${q.length}</a>`); });
+}
+
+/* ---------- Sort what you already know ---------- */
+
+// Terms never introduced and not already marked "teach me", in the order lessons would bring them.
+async function sortQueue(deck) {
+  const teach = new Set(await db.getSetting('sortTeach', []));
+  return content.order.filter(id => !cards[id] && !teach.has(id) && (!deck || content.byId[id].deck === deck));
+}
+
+async function viewSort(deck) {
+  if (deck && !content.byDeck[deck]) return viewGlossary();
+  const seq = navSeq;
+  const q = await sortQueue(deck);
+  if (stale(seq)) return;
+  const total = q.length;
+  const history = []; // for Undo: { id, choice }
+  let known = 0, teach = 0;
+  document.body.classList.add('reviewing');
+  cleanup = () => document.body.classList.remove('reviewing');
+
+  const bar = () => `<div class="session-top"><a class="link" href="${deck ? `#/deck/${esc(deck)}` : '#/'}" aria-label="Done sorting">✕</a>
+    <div class="progress"><div style="width:${(history.length / Math.max(1, total)) * 100}%"></div></div>
+    <button class="link" id="undo" ${history.length ? '' : 'disabled'}>Undo</button></div>`;
+
+  function render() {
+    window.scrollTo(0, 0);
+    const id = q[history.length];
+    if (!id) {
+      app.innerHTML = `<div class="done"><p class="big">All sorted.</p>
+        <p class="muted">${known} marked as known${known ? ': each comes back once over the next week or so for a quick check' : ''}.<br>${teach} left for your daily lessons.</p>
+        <p><a class="btn primary" href="#/">Back to Today</a></p></div>`;
+      return;
+    }
+    const t = content.byId[id];
+    app.innerHTML = `${bar()}<article class="card">${t.img ? `<div class="photo"><img src="${esc(t.img)}" alt=""></div>` : ''}<div class="body">
+      <span class="newtag">${esc(content.deckName[t.deck])} · ${history.length + 1} of ${total}</span>
+      <p class="term">${esc(t.term)}</p>${t.era ? `<p class="era">${esc(t.era)}</p>` : ''}
+      ${defAndSpot(t)}${credit(t)}</div></article>
+      <div class="answer-bar"><div class="inner"><div class="grades" style="grid-template-columns:1fr 1fr">
+        <button data-c="teach">Teach me<small>add to lessons</small></button>
+        <button class="good" data-c="known">I know this<small>check once later</small></button></div></div></div>`;
+    app.querySelector('#undo').onclick = undo;
+    app.querySelectorAll('[data-c]').forEach(b => b.onclick = () => choose(id, b.dataset.c));
+  }
+
+  async function choose(id, choice) {
+    if (choice === 'known') {
+      // Scheduled as an easy first review, then pulled in to 2-9 days so the check comes soon and spread out.
+      const now = new Date();
+      const card = rate(newCard(now), Rating.Easy, now);
+      card.due = new Date(now.getTime() + (2 + Math.random() * 7) * 86400000).toISOString();
+      const rec = { termId: id, card, introduced: now.toISOString(), sorted: true };
+      cards[id] = rec;
+      await db.put('cards', rec);
+      known++;
+    } else {
+      await db.setSetting('sortTeach', [...await db.getSetting('sortTeach', []), id]);
+      teach++;
+    }
+    history.push({ id, choice });
+    render();
+  }
+
+  async function undo() {
+    const last = history.pop();
+    if (!last) return;
+    if (last.choice === 'known') { delete cards[last.id]; await db.del('cards', last.id); known--; }
+    else { await db.setSetting('sortTeach', (await db.getSetting('sortTeach', [])).filter(x => x !== last.id)); teach--; }
+    render();
+  }
+
+  render();
 }
 
 function viewTerm(id) {
@@ -269,7 +383,7 @@ function viewTerm(id) {
   app.innerHTML = `<a class="back" href="#/deck/${esc(t.deck)}">‹ ${esc(content.deckName[t.deck])}</a>
     <article class="card">${t.img ? `<div class="photo"><img src="${esc(t.img)}" alt=""></div>` : ''}<div class="body">
       <p class="term">${esc(t.term)}</p>${t.era ? `<p class="era">${esc(t.era)}</p>` : ''}
-      <p class="def">${esc(t.def)}</p><p class="spot">${esc(t.spot)}</p>
+      ${defAndSpot(t)}
       <div class="ex"><span class="eyebrow">In New York</span><ul>${t.ex.map(e => `<li>${esc(e)}</li>`).join('')}</ul></div>
       ${t.confuse?.length ? `<h3>Don’t confuse with</h3><div class="chips">${t.confuse.map(cid => `<a class="chip" href="#/term/${esc(cid)}">${esc(content.byId[cid].term)}</a>`).join('')}</div>` : ''}
       ${credit(t)}
@@ -394,10 +508,12 @@ function viewEntry(id) {
 /* ---------- Settings ---------- */
 
 async function viewSettings() {
+  const seq = navSeq;
   const n = Math.max(0, Math.min(30, Math.round(Number(await db.getSetting('newPerDay', 5))) || 0));
   const lastBackup = await db.getSetting('lastBackup', null);
   const persisted = await navigator.storage?.persisted?.();
   const est = await navigator.storage?.estimate?.();
+  if (stale(seq)) return;
   app.innerHTML = `<header class="top"><h1>Settings</h1></header>
     <div class="setting"><span>New terms per day</span><span class="stepper"><button id="minus" aria-label="Fewer">−</button><b id="n">${n}</b><button id="plus" aria-label="More">+</button></span></div>
     <h3>Your data</h3>
@@ -439,16 +555,19 @@ async function viewSettings() {
 /* ---------- Router ---------- */
 
 let cleanup = () => {};
+let navSeq = 0; // bumped on every navigation so a slow view that finishes late doesn't draw over the current one
+const stale = seq => seq !== navSeq;
 async function route() {
-  cleanup(); cleanup = () => {};
+  cleanup(); cleanup = () => {}; navSeq++;
   const [path, query] = location.hash.slice(1).split('?');
   const parts = (path || '/').split('/').filter(Boolean);
   const params = new URLSearchParams(query || '');
-  const tab = { glossary: 'glossary', deck: 'glossary', term: 'glossary', journal: 'journal', settings: 'settings' }[parts[0]] || 'today';
+  const tab = { glossary: 'glossary', deck: 'glossary', term: 'glossary', journal: 'journal', settings: 'settings', sort: parts[1] ? 'glossary' : 'today' }[parts[0]] || 'today';
   document.querySelectorAll('#tabs a').forEach(a => a.classList.toggle('on', a.dataset.tab === tab));
   if (parts[0] !== 'review') window.scrollTo(0, 0);
   switch (parts[0]) {
     case 'review': return viewReview();
+    case 'sort': return viewSort(parts[1]);
     case 'glossary': return viewGlossary();
     case 'deck': return viewDeck(parts[1]);
     case 'term': return viewTerm(parts[1]);
