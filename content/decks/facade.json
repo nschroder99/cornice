@@ -1,0 +1,661 @@
+{
+ "id": "facade",
+ "name": "Facade & exterior",
+ "terms": [
+  {
+   "id": "stoop",
+   "term": "Stoop",
+   "def": "The tall flight of exterior steps leading up to a rowhouse's main entrance on the parlor floor.",
+   "spot": "Steps rising roughly a full story above the sidewalk, usually with iron or stone railings. From the Dutch stoep.",
+   "ex": [
+    "West 76th Street between Columbus Ave and Central Park West, Upper West Side",
+    "Park Slope Historic District, Brooklyn"
+   ],
+   "confuse": [
+    "english-basement"
+   ],
+   "q": "brownstone stoop New York",
+   "wiki": "Stoop (architecture)"
+  },
+  {
+   "id": "areaway",
+   "term": "Areaway",
+   "def": "The small fenced or sunken space between the sidewalk and a rowhouse's front wall.",
+   "spot": "An iron fence and gate at the sidewalk line, often with steps down to the basement door tucked under the stoop.",
+   "ex": [
+    "Brownstone rows of Brooklyn Heights",
+    "Side streets of the Upper West Side"
+   ],
+   "q": "brownstone areaway",
+   "wiki": "Areaway"
+  },
+  {
+   "id": "english-basement",
+   "term": "English basement",
+   "def": "A raised basement just a few steps below sidewalk level, with its own entrance beside or under the stoop.",
+   "spot": "Windows partly above the sidewalk, a door under the stoop. Often marketed as the \"garden level\" or \"garden duplex\".",
+   "ex": [
+    "Most Italianate brownstones in Harlem and Park Slope"
+   ],
+   "confuse": [
+    "stoop",
+    "parlor-floor"
+   ],
+   "q": "brownstone basement entrance stoop Harlem",
+   "wiki": "Basement",
+   "noPhoto": true
+  },
+  {
+   "id": "cornice",
+   "term": "Cornice",
+   "def": "The projecting molding that crowns the top of a facade, sheltering the wall below.",
+   "spot": "Look at the roofline: on brownstone rows it's a deep overhang on brackets, usually pressed metal or wood painted to match.",
+   "ex": [
+    "Italianate rows on West 71st Street",
+    "The heavy crowning cornice of the Flatiron Building, 175 Fifth Ave"
+   ],
+   "confuse": [
+    "frieze",
+    "belt-course"
+   ],
+   "q": "brownstone cornice"
+  },
+  {
+   "id": "frieze",
+   "term": "Frieze",
+   "def": "The horizontal band just below the cornice, often decorated or pierced by small attic windows.",
+   "spot": "The flat strip between the top-floor windows and the cornice's overhang.",
+   "ex": [
+    "Greek Revival rows on Washington Square North"
+   ],
+   "confuse": [
+    "cornice",
+    "entablature"
+   ],
+   "q": "frieze cornice New York building"
+  },
+  {
+   "id": "entablature",
+   "term": "Entablature",
+   "def": "The full horizontal band carried by columns: architrave at the bottom, frieze in the middle, cornice on top.",
+   "spot": "On a classical temple front, everything between the column tops and the pediment.",
+   "ex": [
+    "Federal Hall National Memorial, 26 Wall St",
+    "New York Stock Exchange, 18 Broad St"
+   ],
+   "confuse": [
+    "frieze",
+    "architrave"
+   ],
+   "q": "entablature columns"
+  },
+  {
+   "id": "architrave",
+   "term": "Architrave",
+   "def": "The lowest band of an entablature, resting directly on the columns; also the molded frame around a door or window.",
+   "spot": "Indoors: the casing around a doorway. Outdoors: the plain beam right above the capitals.",
+   "ex": [
+    "Door surrounds in Greek Revival rowhouses on Washington Square North"
+   ],
+   "confuse": [
+    "entablature"
+   ],
+   "q": "door architrave molding",
+   "noPhoto": true
+  },
+  {
+   "id": "dentils",
+   "term": "Dentils",
+   "def": "A row of small, closely spaced rectangular blocks under a cornice, like a row of teeth.",
+   "spot": "A regular comb of little blocks just under the cornice's lip.",
+   "ex": [
+    "Cornices of Federal and Greek Revival houses in Greenwich Village"
+   ],
+   "confuse": [
+    "modillions"
+   ],
+   "q": "dentil molding cornice",
+   "wiki": "Dentil"
+  },
+  {
+   "id": "modillions",
+   "term": "Modillions",
+   "def": "Ornamental scroll-shaped brackets set horizontally under the overhang of a cornice.",
+   "spot": "Larger and farther apart than dentils, curling like a sideways S; common on Beaux-Arts and Renaissance Revival cornices.",
+   "ex": [
+    "University Club, 1 West 54th St"
+   ],
+   "confuse": [
+    "dentils",
+    "brackets"
+   ],
+   "q": "modillion cornice",
+   "wiki": "Modillion"
+  },
+  {
+   "id": "brackets",
+   "term": "Brackets",
+   "def": "Projecting supports, real or decorative, holding up a cornice, window hood or balcony.",
+   "spot": "Tall scrolls under a brownstone cornice, usually in pairs or evenly spaced. The signature of Italianate rows.",
+   "ex": [
+    "Italianate brownstones throughout Park Slope and the Upper West Side"
+   ],
+   "confuse": [
+    "modillions",
+    "corbel"
+   ],
+   "q": "Italianate cornice brackets",
+   "wiki": "Bracket (architecture)"
+  },
+  {
+   "id": "corbel",
+   "term": "Corbel",
+   "def": "A block of stone or brick projecting from a wall to support something above it.",
+   "spot": "Stepped-out brick courses under a parapet (corbelling) or a stone block under an oriel or balcony.",
+   "ex": [
+    "Corbelled brick cornices on Lower East Side tenements"
+   ],
+   "confuse": [
+    "brackets"
+   ],
+   "q": "corbel brick cornice tenement"
+  },
+  {
+   "id": "lintel",
+   "term": "Lintel",
+   "def": "The horizontal beam or stone spanning the top of a window or door opening.",
+   "spot": "A single flat stone over each window. Brownstone and Greek Revival houses often have plain stone lintels against brick.",
+   "ex": [
+    "Greek Revival rowhouses in the Greenwich Village Historic District"
+   ],
+   "confuse": [
+    "window-hood",
+    "sill"
+   ],
+   "q": "stone lintels brick rowhouse"
+  },
+  {
+   "id": "sill",
+   "term": "Sill",
+   "def": "The horizontal ledge at the bottom of a window opening, sloped to shed rain.",
+   "spot": "The stone shelf under the window, often projecting on small brackets on brownstones.",
+   "ex": [
+    "Any brownstone row"
+   ],
+   "confuse": [
+    "lintel"
+   ],
+   "q": "window sill brownstone",
+   "wiki": "Windowsill"
+  },
+  {
+   "id": "window-hood",
+   "term": "Window hood",
+   "def": "A projecting molded crown over a window, shedding water and adding ornament.",
+   "spot": "A heavy carved cap above each brownstone window, often arched or with a pediment shape on little brackets.",
+   "ex": [
+    "Italianate rows in Harlem's Mount Morris Park Historic District"
+   ],
+   "confuse": [
+    "lintel",
+    "pediment"
+   ],
+   "q": "brownstone window lintel ornate Brooklyn",
+   "wiki": "Hood mould",
+   "noPhoto": true
+  },
+  {
+   "id": "segmental-arch",
+   "term": "Segmental arch",
+   "def": "A shallow arch whose curve is a segment of a circle, less than a half-circle.",
+   "spot": "Gently curved tops on windows and doors; common on Italianate brownstones and tenement windows.",
+   "ex": [
+    "Doorways of Italianate brownstones in Fort Greene"
+   ],
+   "confuse": [
+    "round-arch"
+   ],
+   "q": "segmental arch window brick"
+  },
+  {
+   "id": "round-arch",
+   "term": "Round arch",
+   "def": "A full semicircular arch, as in Roman and Romanesque building.",
+   "spot": "Windows and doorways topped by a full half-circle; heavy versions mark Romanesque Revival.",
+   "ex": [
+    "Puck Building, 295 Lafayette St"
+   ],
+   "confuse": [
+    "segmental-arch"
+   ],
+   "q": "Puck Building Lafayette Street",
+   "wiki": "Puck Building"
+  },
+  {
+   "id": "keystone",
+   "term": "Keystone",
+   "def": "The central wedge-shaped stone at the top of an arch, often enlarged or carved.",
+   "spot": "The one stone at the arch's crown that sticks out or carries a face or scroll.",
+   "ex": [
+    "Window arches of Renaissance Revival apartment houses on Riverside Drive"
+   ],
+   "confuse": [
+    "voussoir"
+   ],
+   "q": "keystone arch window carved",
+   "wiki": "Keystone (architecture)"
+  },
+  {
+   "id": "voussoir",
+   "term": "Voussoirs",
+   "def": "The wedge-shaped stones or bricks that together form an arch.",
+   "spot": "The fan of individual blocks radiating around an arch, sometimes in alternating colors.",
+   "ex": [
+    "Arched entrances of Romanesque Revival rowhouses in Park Slope"
+   ],
+   "confuse": [
+    "keystone"
+   ],
+   "q": "voussoirs arch stone"
+  },
+  {
+   "id": "pediment",
+   "term": "Pediment",
+   "def": "A low triangular gable, or a curved (segmental) version, crowning a portico, door or window.",
+   "spot": "Triangle over the front of a temple-like building, or small triangles and arcs over windows.",
+   "ex": [
+    "New York Stock Exchange, 18 Broad St"
+   ],
+   "confuse": [
+    "window-hood"
+   ],
+   "q": "New York Stock Exchange pediment"
+  },
+  {
+   "id": "portico",
+   "term": "Portico",
+   "def": "A porch with a roof held up by columns, usually leading to the main entrance.",
+   "spot": "A columned front porch, often with a pediment on top.",
+   "ex": [
+    "Federal Hall National Memorial, 26 Wall St"
+   ],
+   "confuse": [
+    "loggia"
+   ],
+   "q": "Federal Hall New York portico",
+   "wiki": "Federal Hall National Memorial"
+  },
+  {
+   "id": "doric",
+   "term": "Doric order",
+   "def": "The plainest classical column: no base (Greek) and a simple cushion-shaped capital.",
+   "spot": "Thick columns with plain, flat-topped capitals. Think Greek Revival porches.",
+   "ex": [
+    "Federal Hall National Memorial, 26 Wall St"
+   ],
+   "confuse": [
+    "ionic",
+    "corinthian"
+   ],
+   "q": "Federal Hall columns Doric",
+   "wiki": "Doric order"
+  },
+  {
+   "id": "ionic",
+   "term": "Ionic order",
+   "def": "The classical column whose capital ends in a pair of scrolls called volutes.",
+   "spot": "Look for the two spiral scrolls at the top, like a rolled sheet of paper.",
+   "ex": [
+    "Lower colonnade of 55 Wall Street (former Merchants' Exchange)"
+   ],
+   "confuse": [
+    "doric",
+    "corinthian"
+   ],
+   "q": "55 Wall Street colonnade",
+   "wiki": "Ionic order"
+  },
+  {
+   "id": "corinthian",
+   "term": "Corinthian order",
+   "def": "The most ornate classical column, its capital carved with acanthus leaves.",
+   "spot": "Leafy, bell-shaped tops sprouting small scrolls at the corners.",
+   "ex": [
+    "New York Stock Exchange, 18 Broad St",
+    "Colonnade Row, 428–434 Lafayette St"
+   ],
+   "confuse": [
+    "ionic",
+    "doric"
+   ],
+   "q": "New York Stock Exchange columns",
+   "wiki": "Corinthian order"
+  },
+  {
+   "id": "pilaster",
+   "term": "Pilaster",
+   "def": "A flat, shallow column projecting slightly from a wall, purely decorative.",
+   "spot": "Looks like a column pressed flat against the facade, with a base and capital; frames doorways in Greek Revival houses.",
+   "ex": [
+    "Doorways on Washington Square North"
+   ],
+   "confuse": [
+    "engaged-column"
+   ],
+   "q": "pilasters facade"
+  },
+  {
+   "id": "engaged-column",
+   "term": "Engaged column",
+   "def": "A round column partly embedded in a wall, so only half or three-quarters stands free.",
+   "spot": "Round, unlike a pilaster, but attached to the facade.",
+   "ex": [
+    "Classical bank and civic facades of the early 1900s"
+   ],
+   "confuse": [
+    "pilaster"
+   ],
+   "q": "engaged columns facade classical",
+   "wiki": "Engaged column"
+  },
+  {
+   "id": "quoins",
+   "term": "Quoins",
+   "def": "Dressed stones or blocks laid at the corners of a building, alternating long and short.",
+   "spot": "A zipper-like pattern of blocks running up the corners, often in a contrasting color.",
+   "ex": [
+    "Corners of Georgian and Beaux-Arts mansions on the Upper East Side"
+   ],
+   "confuse": [
+    "rustication"
+   ],
+   "q": "quoins corner building New York",
+   "wiki": "Quoin"
+  },
+  {
+   "id": "rustication",
+   "term": "Rustication",
+   "def": "Masonry cut with deep joints or rough faces so the stones read as massive and strong, usually on the ground floor.",
+   "spot": "Bold horizontal grooves or rough boulder-like stone at the base of a building.",
+   "ex": [
+    "Federal Reserve Bank of New York, 33 Liberty St"
+   ],
+   "confuse": [
+    "quoins"
+   ],
+   "q": "Federal Reserve Bank of New York building",
+   "wiki": "Rustication (architecture)"
+  },
+  {
+   "id": "belt-course",
+   "term": "Belt course",
+   "def": "A horizontal band of stone or brick across a facade, usually marking a floor line. Also called a stringcourse.",
+   "spot": "A continuous ledge or stripe running across the building between floors.",
+   "ex": [
+    "Prewar apartment houses on West End Avenue"
+   ],
+   "confuse": [
+    "cornice"
+   ],
+   "q": "belt course",
+   "wiki": "Belt course"
+  },
+  {
+   "id": "oriel",
+   "term": "Oriel",
+   "def": "A bay window projecting from an upper floor, supported on brackets or corbels, that doesn't reach the ground.",
+   "spot": "A box of windows hanging off the facade with nothing beneath it.",
+   "ex": [
+    "Rowhouses of the Riverside–West End Historic District"
+   ],
+   "confuse": [
+    "bay-window"
+   ],
+   "q": "oriel window New York rowhouse",
+   "wiki": "Oriel window"
+  },
+  {
+   "id": "bay-window",
+   "term": "Bay window",
+   "def": "A projecting window bay that rises from the ground or foundation.",
+   "spot": "A projecting bay with walls that run all the way down to the sidewalk or areaway.",
+   "ex": [
+    "Bowed and angled bays on Park Slope rowhouses"
+   ],
+   "confuse": [
+    "oriel"
+   ],
+   "q": "bay window brownstone Brooklyn"
+  },
+  {
+   "id": "mansard",
+   "term": "Mansard roof",
+   "def": "A double-pitched roof with a very steep lower slope, nearly a wall, pierced by dormers. Signature of the Second Empire style.",
+   "spot": "A steep slate or copper roof that adds an extra story, with dormer windows poking out.",
+   "ex": [
+    "The Plaza, 768 Fifth Ave",
+    "Gilsey House, 1200 Broadway"
+   ],
+   "confuse": [
+    "dormer"
+   ],
+   "q": "Gilsey House Broadway",
+   "wiki": "Mansard roof"
+  },
+  {
+   "id": "dormer",
+   "term": "Dormer",
+   "def": "A window set into a small roofed projection that pokes out of a sloped roof.",
+   "spot": "Little roofed windows on a pitched or mansard roof. Federal houses have them on their peaked roofs.",
+   "ex": [
+    "Federal houses in the Charlton–King–Vandam Historic District"
+   ],
+   "confuse": [
+    "mansard"
+   ],
+   "q": "dormers roof Greenwich Village house"
+  },
+  {
+   "id": "parapet",
+   "term": "Parapet",
+   "def": "A low wall rising above the roofline.",
+   "spot": "The wall that keeps going past the roof, sometimes stepped, crenellated or topped with a balustrade.",
+   "ex": [
+    "Tenements and loft buildings across SoHo"
+   ],
+   "q": "parapet roofline New York building"
+  },
+  {
+   "id": "balustrade",
+   "term": "Balustrade",
+   "def": "A railing made of a row of short posts (balusters) topped by a rail.",
+   "spot": "A row of vase-shaped posts along a roofline, terrace, balcony or stair.",
+   "ex": [
+    "Rooflines of Beaux-Arts buildings on Fifth Avenue"
+   ],
+   "confuse": [
+    "parapet"
+   ],
+   "q": "balustrade roofline Beaux-Arts New York",
+   "wiki": "Baluster"
+  },
+  {
+   "id": "loggia",
+   "term": "Loggia",
+   "def": "An open-sided gallery or arcade recessed into a building and open to the air on one side.",
+   "spot": "A roofed, columned open space set back into the facade, often on upper floors.",
+   "ex": [
+    "Upper-story loggias on Renaissance Revival apartment houses",
+    "Recessed loggia terraces of new condos such as The Park Loggia, 15 West 61st St"
+   ],
+   "confuse": [
+    "portico",
+    "arcade"
+   ],
+   "q": "loggia New York building"
+  },
+  {
+   "id": "arcade",
+   "term": "Arcade",
+   "def": "A row of arches carried on columns or piers.",
+   "spot": "A rhythm of repeated arches along a ground floor or across a facade.",
+   "ex": [
+    "Stacked arcades of the Haughwout Building, 488 Broadway"
+   ],
+   "confuse": [
+    "loggia"
+   ],
+   "q": "Haughwout Building",
+   "wiki": "Arcade (architecture)"
+  },
+  {
+   "id": "fanlight",
+   "term": "Fanlight",
+   "def": "A semicircular or elliptical window over a door, often with radiating muntins like a fan.",
+   "spot": "A half-moon of glass over the front door, a hallmark of Federal-style houses.",
+   "ex": [
+    "Federal rowhouses in the Charlton–King–Vandam Historic District"
+   ],
+   "confuse": [
+    "transom"
+   ],
+   "q": "fanlight doorway Greenwich Village"
+  },
+  {
+   "id": "sidelights",
+   "term": "Sidelights",
+   "def": "Narrow vertical windows flanking a door.",
+   "spot": "Thin glass panels on each side of the front door; Greek Revival doorways pair them with a rectangular transom.",
+   "ex": [
+    "Greek Revival doorways on Washington Square North"
+   ],
+   "confuse": [
+    "fanlight"
+   ],
+   "q": "Greek Revival doorway sidelights transom",
+   "wiki": "Sidelight"
+  },
+  {
+   "id": "spandrel",
+   "term": "Spandrel",
+   "def": "On a skyscraper, the panel between the top of one window and the sill of the one above; in an arch, the roughly triangular space beside its curve.",
+   "spot": "The decorated or metal panels stacked between windows in vertical strips, a key Art Deco surface.",
+   "ex": [
+    "Aluminum spandrels of the Empire State Building, 350 Fifth Ave"
+   ],
+   "q": "Empire State Building aluminum spandrels"
+  },
+  {
+   "id": "setback",
+   "term": "Setback",
+   "def": "An upper-floor step-back required by the 1916 Zoning Resolution so light reaches the street, giving towers their \"wedding cake\" profile.",
+   "spot": "Floors stepping in as the building rises, often with terraces on each step.",
+   "ex": [
+    "Barclay–Vesey Building, 140 West St",
+    "Prewar towers along Central Park West"
+   ],
+   "confuse": [
+    "penthouse"
+   ],
+   "q": "Barclay-Vesey Building",
+   "wiki": "Setback (architecture)"
+  },
+  {
+   "id": "crown",
+   "term": "Crown",
+   "def": "The decorative top of a tower, designed to be seen from far away.",
+   "spot": "Look up past the main shaft: terraced arches, spires, lanterns or temples.",
+   "ex": [
+    "Chrysler Building, 405 Lexington Ave",
+    "Twin towers of the San Remo, 145 Central Park West"
+   ],
+   "q": "Chrysler Building crown",
+   "wiki": "Chrysler Building"
+  },
+  {
+   "id": "gargoyle",
+   "term": "Gargoyle",
+   "def": "A carved spout, often a creature, that throws rainwater off a roof. Purely ornamental versions are grotesques.",
+   "spot": "Creatures projecting from cornices and setbacks.",
+   "ex": [
+    "Steel eagle heads on the Chrysler Building, 405 Lexington Ave"
+   ],
+   "q": "Chrysler Building eagle gargoyle"
+  },
+  {
+   "id": "finial",
+   "term": "Finial",
+   "def": "An ornament capping the top of a spire, gable, post or roof peak.",
+   "spot": "A knob, urn or spike at the very top point.",
+   "ex": [
+    "Spires of St. Patrick's Cathedral, Fifth Ave at 50th St"
+   ],
+   "q": "finial spire Gothic New York"
+  },
+  {
+   "id": "fire-escape",
+   "term": "Fire escape",
+   "def": "External iron balconies and ladders, required on tenements from the 1860s as an emergency exit.",
+   "spot": "Zigzag iron stairs or stacked balconies across the front of tenements and loft buildings.",
+   "ex": [
+    "Tenement blocks of the Lower East Side",
+    "Loft buildings in SoHo"
+   ],
+   "q": "fire escape New York",
+   "wiki": "Fire escape"
+  },
+  {
+   "id": "water-tower",
+   "term": "Water tower",
+   "def": "A wooden rooftop tank that stores water for buildings taller than about six stories, beyond what city water pressure reaches.",
+   "spot": "Barrel-shaped cedar or redwood tanks with cone hats on steel legs. A few firms, like Rosenwach, still build them.",
+   "ex": [
+    "Rooftops across SoHo and Tribeca"
+   ],
+   "q": "rooftop water tower Manhattan",
+   "wiki": "Water tower"
+  },
+  {
+   "id": "curtain-wall",
+   "term": "Curtain wall",
+   "def": "A non-load-bearing outer skin of glass and metal hung on a building's frame.",
+   "spot": "A continuous grid of glass and mullions with no visible masonry holding anything up.",
+   "ex": [
+    "Lever House, 390 Park Ave",
+    "Seagram Building, 375 Park Ave"
+   ],
+   "q": "Lever House Park Avenue",
+   "wiki": "Lever House"
+  },
+  {
+   "id": "piano-nobile",
+   "term": "Piano nobile",
+   "def": "The principal floor of a grand house, raised one story above the ground and given the tallest windows.",
+   "spot": "One floor up, with the biggest windows, balconies or most ornament. The parlor floor is New York's version.",
+   "ex": [
+    "Villard Houses, 451–457 Madison Ave",
+    "The Frick Collection, 1 East 70th St"
+   ],
+   "confuse": [
+    "parlor-floor"
+   ],
+   "q": "Villard Houses",
+   "wiki": "Piano nobile"
+  },
+  {
+   "id": "cast-iron-facade",
+   "term": "Cast-iron facade",
+   "def": "A building front of prefabricated cast-iron parts bolted together, popular from the 1850s to the 1880s.",
+   "spot": "Repeated columns and arches with crisp, identical detail; a magnet sticks. SoHo has the world's largest concentration.",
+   "ex": [
+    "Haughwout Building, 488 Broadway",
+    "Gilsey House, 1200 Broadway"
+   ],
+   "confuse": [
+    "pressed-metal"
+   ],
+   "q": "Haughwout Building Broadway",
+   "wiki": "E. V. Haughwout Building"
+  }
+ ]
+}

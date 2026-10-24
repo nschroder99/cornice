@@ -1,0 +1,267 @@
+{
+ "id": "styles",
+ "name": "Styles",
+ "terms": [
+  {
+   "id": "federal",
+   "term": "Federal",
+   "era": "c. 1790–1835",
+   "def": "The city's earliest surviving rowhouse style: modest red-brick houses two and a half stories tall with peaked roofs.",
+   "spot": "Flemish-bond brick, a pitched roof with dormers, a low stoop, and a doorway with a fanlight.",
+   "ex": [
+    "Charlton–King–Vandam Historic District, Hudson Square",
+    "Edward Mooney House, 18 Bowery"
+   ],
+   "confuse": [
+    "greek-revival"
+   ],
+   "q": "Federal style house Manhattan",
+   "wiki": "Federal architecture"
+  },
+  {
+   "id": "greek-revival",
+   "term": "Greek Revival",
+   "era": "c. 1830–1850",
+   "def": "Red-brick rowhouses with flat roofs and temple-inspired doorways, reflecting a fashion for ancient Greece.",
+   "spot": "Three full stories with a flat roof and simple cornice, a rectangular transom and sidelights around the door, framed by columns or pilasters.",
+   "ex": [
+    "\"The Row,\" 1–13 Washington Square North",
+    "Merchant's House Museum, 29 East 4th St"
+   ],
+   "confuse": [
+    "federal",
+    "italianate"
+   ],
+   "q": "Washington Square North Greek Revival row",
+   "wiki": "Greek Revival architecture"
+  },
+  {
+   "id": "gothic-revival",
+   "term": "Gothic Revival",
+   "era": "c. 1840–1870 (churches much later)",
+   "def": "A medieval revival using pointed arches, tracery and verticality, mostly for churches.",
+   "spot": "Pointed-arch windows and doors, spires, buttresses, drip moldings.",
+   "ex": [
+    "Trinity Church, Broadway at Wall St",
+    "St. Patrick's Cathedral, Fifth Ave at 50th St"
+   ],
+   "confuse": [
+    "romanesque-revival"
+   ],
+   "q": "Trinity Church Wall Street",
+   "wiki": "Trinity Church (Manhattan)"
+  },
+  {
+   "id": "italianate",
+   "term": "Italianate",
+   "era": "c. 1845–1880",
+   "def": "The classic brownstone: tall stooped rowhouses modeled on Italian palazzos, faced in brownstone.",
+   "spot": "High stoop with cast-iron railings, heavy bracketed cornice, arched or segmental windows with carved hoods, double doors in a deep arched doorway.",
+   "ex": [
+    "Park Slope Historic District",
+    "Mount Morris Park Historic District, Harlem"
+   ],
+   "confuse": [
+    "greek-revival",
+    "neo-grec"
+   ],
+   "q": "Italianate brownstone row Brooklyn",
+   "wiki": "Italianate architecture"
+  },
+  {
+   "id": "second-empire",
+   "term": "Second Empire",
+   "era": "c. 1860–1880",
+   "def": "A style borrowed from Napoleon III's Paris, defined by the mansard roof.",
+   "spot": "Mansard roof with dormers on top of an otherwise Italianate building.",
+   "ex": [
+    "Gilsey House, 1200 Broadway"
+   ],
+   "confuse": [
+    "beaux-arts"
+   ],
+   "q": "Second Empire mansard New York building",
+   "wiki": "Gilsey House"
+  },
+  {
+   "id": "neo-grec",
+   "term": "Neo-Grec",
+   "era": "c. 1865–1885",
+   "def": "A late brownstone style with crisp, angular, machine-cut ornament.",
+   "spot": "Incised lines grooved into the stone, stylized angular brackets, flatter and more geometric than Italianate.",
+   "ex": [
+    "Rowhouses of the Upper West Side–Central Park West Historic District",
+    "Bedford-Stuyvesant brownstones"
+   ],
+   "confuse": [
+    "italianate"
+   ],
+   "q": "neo-grec rowhouse",
+   "wiki": "Néo-Grec"
+  },
+  {
+   "id": "queen-anne",
+   "term": "Queen Anne",
+   "era": "c. 1880–1900",
+   "def": "A picturesque, deliberately irregular style that mixes materials, gables, towers and textures.",
+   "spot": "Asymmetry: turrets, gables, bay windows, terra cotta panels and several kinds of brick on one facade.",
+   "ex": [
+    "Henderson Place Historic District, East End Ave at 86th St"
+   ],
+   "confuse": [
+    "romanesque-revival"
+   ],
+   "q": "Henderson Place Queen Anne",
+   "wiki": "Henderson Place Historic District"
+  },
+  {
+   "id": "romanesque-revival",
+   "term": "Romanesque Revival",
+   "era": "c. 1880–1900",
+   "def": "A heavy, massive style built on round arches and rough-faced stone, often called Richardsonian after H.H. Richardson.",
+   "spot": "Wide round arches over entrances, rock-faced stone, deep-set windows, squat columns.",
+   "ex": [
+    "Puck Building, 295 Lafayette St",
+    "Romanesque rows in Park Slope"
+   ],
+   "confuse": [
+    "queen-anne",
+    "gothic-revival"
+   ],
+   "q": "Romanesque Revival New York",
+   "wiki": "Romanesque Revival architecture"
+  },
+  {
+   "id": "renaissance-revival",
+   "term": "Renaissance Revival",
+   "era": "c. 1880–1920",
+   "def": "Buildings modeled on Italian Renaissance palazzos: symmetrical, layered and restrained.",
+   "spot": "A rusticated base, an even middle and a big cornice, with tidy rows of windows and classical trim.",
+   "ex": [
+    "Villard Houses, 451–457 Madison Ave",
+    "University Club, 1 West 54th St"
+   ],
+   "confuse": [
+    "beaux-arts",
+    "italianate"
+   ],
+   "q": "University Club of New York building",
+   "wiki": "University Club of New York"
+  },
+  {
+   "id": "beaux-arts",
+   "term": "Beaux-Arts",
+   "era": "c. 1890–1920",
+   "def": "Grand, exuberant classicism taught at the École des Beaux-Arts in Paris.",
+   "spot": "Pale stone, monumental scale, paired columns, rich sculpture, balustrades and sometimes a mansard roof.",
+   "ex": [
+    "New York Public Library, Fifth Ave at 42nd St",
+    "Grand Central Terminal"
+   ],
+   "confuse": [
+    "renaissance-revival",
+    "second-empire"
+   ],
+   "q": "New York Public Library Main Branch facade",
+   "wiki": "New York Public Library Main Branch"
+  },
+  {
+   "id": "art-deco",
+   "term": "Art Deco",
+   "era": "c. 1925–1940",
+   "def": "Jazz Age modernity: stepped setbacks, strong verticals and stylized geometric ornament.",
+   "spot": "Zigzags, chevrons, sunbursts, metal spandrels and corner windows; masses stepping up to a crown.",
+   "ex": [
+    "Chrysler Building, 405 Lexington Ave",
+    "The Century, 25 Central Park West"
+   ],
+   "confuse": [
+    "setback",
+    "international-style"
+   ],
+   "q": "The Century apartment building Central Park West",
+   "wiki": "Century Apartments"
+  },
+  {
+   "id": "postwar-brick",
+   "term": "Postwar white and red brick",
+   "era": "c. 1945–1975",
+   "def": "Plain brick apartment slabs built in the housing boom after World War II.",
+   "spot": "White or red brick, little ornament, balconies, ribbon or corner windows, lower ceilings than prewar.",
+   "ex": [
+    "Manhattan House, 200 East 66th St",
+    "Second and Third Avenue towers on the Upper East Side"
+   ],
+   "confuse": [
+    "international-style"
+   ],
+   "q": "white brick apartment building Manhattan",
+   "wiki": "Manhattan House"
+  },
+  {
+   "id": "international-style",
+   "term": "International Style",
+   "era": "c. 1950–1975",
+   "def": "Modernism with no ornament at all: a pure volume of glass and steel.",
+   "spot": "Glass curtain walls, flat tops, regular grids, often a plaza in front.",
+   "ex": [
+    "Lever House, 390 Park Ave",
+    "Seagram Building, 375 Park Ave"
+   ],
+   "confuse": [
+    "postwar-brick",
+    "contemporary"
+   ],
+   "q": "Seagram Building Park Avenue",
+   "wiki": "Seagram Building"
+  },
+  {
+   "id": "postmodern",
+   "term": "Postmodern",
+   "era": "c. 1978–1995",
+   "def": "A reaction against glass boxes that brings back historic forms, often with wit.",
+   "spot": "Exaggerated classical shapes, pediments and arches in new materials, playful tops.",
+   "ex": [
+    "550 Madison Ave (former AT&T Building)"
+   ],
+   "confuse": [
+    "new-classical"
+   ],
+   "q": "550 Madison Avenue AT&T Building",
+   "wiki": "550 Madison Avenue"
+  },
+  {
+   "id": "new-classical",
+   "term": "New Classical",
+   "era": "c. 2000–present",
+   "def": "New buildings that revive prewar limestone grandeur, led by Robert A.M. Stern.",
+   "spot": "New limestone towers with setbacks, classical trim and prewar-style layouts.",
+   "ex": [
+    "15 Central Park West",
+    "220 Central Park South"
+   ],
+   "confuse": [
+    "postmodern",
+    "renaissance-revival"
+   ],
+   "q": "15 Central Park West",
+   "wiki": "15 Central Park West"
+  },
+  {
+   "id": "contemporary",
+   "term": "Contemporary / supertall",
+   "era": "c. 2005–present",
+   "def": "Today's luxury towers: engineered slenderness, sculptural form and glass or terra cotta skins.",
+   "spot": "Extremely thin towers, irregular or twisting massing, cantilevers, floor-to-ceiling glass.",
+   "ex": [
+    "432 Park Ave",
+    "56 Leonard St, Tribeca"
+   ],
+   "confuse": [
+    "international-style"
+   ],
+   "q": "432 Park Avenue tower",
+   "wiki": "Central Park Tower"
+  }
+ ]
+}

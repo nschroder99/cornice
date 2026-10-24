@@ -1,0 +1,349 @@
+{
+ "id": "architects",
+ "name": "Architects",
+ "terms": [
+  {
+   "id": "candela",
+   "term": "Rosario Candela",
+   "era": "1890–1953",
+   "def": "The architect of the most coveted prewar co-ops, famous for intricate duplex and triplex floor plans.",
+   "spot": "Limestone-based Park and Fifth Avenue co-ops of 1927–1931 with grand galleries and staggered floor levels.",
+   "ex": [
+    "740 Park Ave (with Arthur Loomis Harmon)",
+    "770 Park Ave",
+    "834 Fifth Ave"
+   ],
+   "confuse": [
+    "carpenter",
+    "roth"
+   ],
+   "q": "740 Park Avenue",
+   "wiki": "740 Park Avenue"
+  },
+  {
+   "id": "roth",
+   "term": "Emery Roth",
+   "era": "1871–1948",
+   "def": "Designer of the great twin-towered Central Park West apartment houses; his firm later built many postwar towers.",
+   "spot": "Prewar towers with ornate crowns, often paired twin towers facing the park.",
+   "ex": [
+    "The San Remo, 145 Central Park West",
+    "The Beresford, 211 Central Park West",
+    "The El Dorado, 300 Central Park West"
+   ],
+   "confuse": [
+    "chanin",
+    "candela"
+   ],
+   "q": "San Remo Central Park West",
+   "wiki": "San Remo (building)"
+  },
+  {
+   "id": "carpenter",
+   "term": "J.E.R. Carpenter",
+   "era": "1867–1932",
+   "def": "A prolific designer of early Park and Fifth Avenue luxury apartment buildings.",
+   "spot": "Dignified Renaissance Revival co-ops from the 1910s and 1920s.",
+   "ex": [
+    "907 Fifth Ave",
+    "Lincoln Building, 60 East 42nd St"
+   ],
+   "confuse": [
+    "candela"
+   ],
+   "q": "907 Fifth Avenue",
+   "wiki": "907 Fifth Avenue"
+  },
+  {
+   "id": "mmw",
+   "term": "McKim, Mead & White",
+   "era": "active 1879–1919",
+   "def": "The leading American firm of the Gilded Age, masters of Renaissance and classical design.",
+   "spot": "Refined, scholarly classical buildings in stone and brick.",
+   "ex": [
+    "Villard Houses, 451–457 Madison Ave",
+    "The Morgan Library, 225 Madison Ave",
+    "Original Pennsylvania Station (demolished 1963)"
+   ],
+   "confuse": [
+    "carrere-hastings"
+   ],
+   "q": "Morgan Library Madison Avenue McKim building",
+   "wiki": "Morgan Library & Museum"
+  },
+  {
+   "id": "carrere-hastings",
+   "term": "Carrère & Hastings",
+   "era": "active 1885–1929",
+   "def": "École-trained partners behind some of the city's finest Beaux-Arts landmarks.",
+   "spot": "Grand white marble or limestone with lavish sculpture.",
+   "ex": [
+    "New York Public Library, Fifth Ave at 42nd St",
+    "The Frick Collection, 1 East 70th St"
+   ],
+   "confuse": [
+    "mmw",
+    "warren-wetmore"
+   ],
+   "q": "Frick Collection",
+   "wiki": "Frick Collection"
+  },
+  {
+   "id": "warren-wetmore",
+   "term": "Warren & Wetmore",
+   "era": "active 1898–1931",
+   "def": "Beaux-Arts firm behind Grand Central Terminal and many Park Avenue apartment houses.",
+   "spot": "Classical grandeur, from the terminal facade to dignified Park Avenue co-ops.",
+   "ex": [
+    "Grand Central Terminal (with Reed & Stem)",
+    "Steinway Hall, 109 West 57th St"
+   ],
+   "confuse": [
+    "carrere-hastings"
+   ],
+   "q": "Grand Central Terminal exterior",
+   "wiki": "Grand Central Terminal"
+  },
+  {
+   "id": "hardenbergh",
+   "term": "Henry J. Hardenbergh",
+   "era": "1847–1918",
+   "def": "Architect of the Dakota and the Plaza, two of the city's most romantic buildings.",
+   "spot": "Picturesque rooflines with gables, dormers and mansards.",
+   "ex": [
+    "The Dakota, 1 West 72nd St",
+    "The Plaza, 768 Fifth Ave"
+   ],
+   "q": "The Dakota building New York",
+   "wiki": "The Dakota"
+  },
+  {
+   "id": "gilbert",
+   "term": "Cass Gilbert",
+   "era": "1859–1934",
+   "def": "Architect of the Woolworth Building, the \"Cathedral of Commerce\" and the world's tallest building from 1913 to 1930.",
+   "spot": "Gothic-ornamented skyscrapers and monumental Beaux-Arts civic buildings.",
+   "ex": [
+    "Woolworth Building, 233 Broadway",
+    "Alexander Hamilton U.S. Custom House, 1 Bowling Green"
+   ],
+   "q": "Woolworth Building",
+   "wiki": "Woolworth Building"
+  },
+  {
+   "id": "hunt",
+   "term": "Richard Morris Hunt",
+   "era": "1827–1895",
+   "def": "The first American trained at the École des Beaux-Arts, who brought the style home.",
+   "spot": "Grand classical compositions, French-inspired.",
+   "ex": [
+    "Fifth Avenue facade of the Metropolitan Museum of Art",
+    "Pedestal of the Statue of Liberty"
+   ],
+   "q": "Metropolitan Museum of Art Fifth Avenue facade",
+   "wiki": "The Met Fifth Avenue"
+  },
+  {
+   "id": "renwick",
+   "term": "James Renwick Jr.",
+   "era": "1818–1895",
+   "def": "Leading Gothic Revival architect of mid-19th-century New York.",
+   "spot": "Pointed arches, spires and white stone church fronts.",
+   "ex": [
+    "St. Patrick's Cathedral, Fifth Ave at 50th St",
+    "Grace Church, 802 Broadway"
+   ],
+   "q": "Grace Church Broadway New York",
+   "wiki": "Grace Church (Manhattan)"
+  },
+  {
+   "id": "van-alen",
+   "term": "William Van Alen",
+   "era": "1883–1954",
+   "def": "Architect of the Chrysler Building, Art Deco's showpiece.",
+   "spot": "Stainless steel, automotive ornament, a terraced sunburst crown.",
+   "ex": [
+    "Chrysler Building, 405 Lexington Ave"
+   ],
+   "q": "Chrysler Building",
+   "wiki": "Chrysler Building"
+  },
+  {
+   "id": "slh",
+   "term": "Shreve, Lamb & Harmon",
+   "era": "active 1929–1970s",
+   "def": "Firm that designed the Empire State Building, built in just over a year.",
+   "spot": "Limestone and aluminum Deco setbacks rising to a mast.",
+   "ex": [
+    "Empire State Building, 350 Fifth Ave"
+   ],
+   "q": "Empire State Building",
+   "wiki": "Empire State Building"
+  },
+  {
+   "id": "chanin",
+   "term": "Irwin S. Chanin",
+   "era": "1891–1988",
+   "def": "Developer-architect behind the twin-towered Art Deco apartment houses on Central Park West.",
+   "spot": "Deco twin towers with horizontal bands and corner windows.",
+   "ex": [
+    "The Century, 25 Central Park West",
+    "The Majestic, 115 Central Park West",
+    "Chanin Building, 122 East 42nd St"
+   ],
+   "confuse": [
+    "roth"
+   ],
+   "q": "The Majestic Central Park West",
+   "wiki": "Majestic Apartments"
+  },
+  {
+   "id": "mies",
+   "term": "Ludwig Mies van der Rohe",
+   "era": "1886–1969",
+   "def": "Modernist master of \"less is more\"; his only New York building is the Seagram Building.",
+   "spot": "Bronze-toned steel and glass, set back behind a granite plaza.",
+   "ex": [
+    "Seagram Building, 375 Park Ave (with Philip Johnson)"
+   ],
+   "confuse": [
+    "som",
+    "johnson"
+   ],
+   "q": "Seagram Building",
+   "wiki": "Seagram Building"
+  },
+  {
+   "id": "som",
+   "term": "Skidmore, Owings & Merrill",
+   "era": "founded 1936",
+   "def": "The corporate modernist firm behind Lever House and One World Trade Center.",
+   "spot": "Crisp glass towers, from 1950s slabs to today's supertalls.",
+   "ex": [
+    "Lever House, 390 Park Ave",
+    "One World Trade Center",
+    "Manhattan House, 200 East 66th St (with Mayer & Whittlesey)"
+   ],
+   "confuse": [
+    "mies"
+   ],
+   "q": "Lever House",
+   "wiki": "Lever House"
+  },
+  {
+   "id": "johnson",
+   "term": "Philip Johnson",
+   "era": "1906–2005",
+   "def": "Architect who helped launch modernism in America, then led the turn to postmodernism.",
+   "spot": "From glass modernism to a granite skyscraper with a broken pediment.",
+   "ex": [
+    "550 Madison Ave (with John Burgee)",
+    "Lipstick Building, 885 Third Ave"
+   ],
+   "confuse": [
+    "mies"
+   ],
+   "q": "Lipstick Building Third Avenue",
+   "wiki": "Lipstick Building"
+  },
+  {
+   "id": "stern",
+   "term": "Robert A.M. Stern",
+   "era": "1939–2025",
+   "def": "The leading architect of new classical luxury towers, which revived prewar limestone glamour.",
+   "spot": "New limestone towers with setbacks, terraces and lanterns on top.",
+   "ex": [
+    "15 Central Park West",
+    "220 Central Park South",
+    "520 Park Ave"
+   ],
+   "confuse": [
+    "candela"
+   ],
+   "q": "220 Central Park South",
+   "wiki": "220 Central Park South"
+  },
+  {
+   "id": "meier",
+   "term": "Richard Meier",
+   "era": "born 1934",
+   "def": "Modernist known for pure white and glass, whose Perry Street towers kicked off the far West Village glass condo.",
+   "spot": "White steel frames and floor-to-ceiling glass.",
+   "ex": [
+    "173 and 176 Perry St, West Village"
+   ],
+   "q": "Richard Meier Perry Street",
+   "wiki": "173/176 Perry Street"
+  },
+  {
+   "id": "shop",
+   "term": "SHoP Architects",
+   "era": "founded 1996",
+   "def": "Firm behind some of today's most striking towers, including the world's most slender skyscraper.",
+   "spot": "Terra cotta and bronze ribs, copper cladding, sky bridges.",
+   "ex": [
+    "111 West 57th St (Steinway Tower)",
+    "American Copper Buildings, 626 First Ave"
+   ],
+   "confuse": [
+    "big"
+   ],
+   "q": "111 West 57th Street Steinway Tower",
+   "wiki": "111 West 57th Street"
+  },
+  {
+   "id": "big",
+   "term": "BIG (Bjarke Ingels Group)",
+   "era": "founded 2005",
+   "def": "Danish firm known for bold geometric shapes that combine courtyard living with tower form.",
+   "spot": "Sloping, twisting or tilted volumes.",
+   "ex": [
+    "VIA 57 West, 625 West 57th St",
+    "The XI, 76 Eleventh Ave"
+   ],
+   "confuse": [
+    "shop"
+   ],
+   "q": "VIA 57 West",
+   "wiki": "Via 57 West"
+  },
+  {
+   "id": "herzog",
+   "term": "Herzog & de Meuron",
+   "era": "founded 1978",
+   "def": "Swiss firm whose 56 Leonard stacks glass-walled homes like a game of Jenga.",
+   "spot": "Cantilevered, stacked boxes; inventive facades.",
+   "ex": [
+    "56 Leonard St, Tribeca",
+    "40 Bond St, NoHo"
+   ],
+   "q": "56 Leonard Street",
+   "wiki": "56 Leonard Street"
+  },
+  {
+   "id": "vinoly",
+   "term": "Rafael Viñoly",
+   "era": "1944–2023",
+   "def": "Architect of 432 Park Avenue, a stark concrete grid rising nearly 1,400 feet.",
+   "spot": "A perfect square in plan, with a uniform grid of 10-foot windows.",
+   "ex": [
+    "432 Park Ave"
+   ],
+   "q": "432 Park Avenue",
+   "wiki": "432 Park Avenue"
+  },
+  {
+   "id": "gehry",
+   "term": "Frank Gehry",
+   "era": "1929–2025",
+   "def": "Architect known for rippling, sculptural surfaces.",
+   "spot": "Stainless steel that folds like fabric, or white glass that billows.",
+   "ex": [
+    "8 Spruce St, Financial District",
+    "IAC Building, 555 West 18th St"
+   ],
+   "q": "8 Spruce Street",
+   "wiki": "8 Spruce Street"
+  }
+ ]
+}

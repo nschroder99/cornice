@@ -1,0 +1,212 @@
+{
+ "id": "materials",
+ "name": "Materials",
+ "terms": [
+  {
+   "id": "brownstone-stone",
+   "term": "Brownstone (the stone)",
+   "def": "A brown Triassic sandstone, much of it quarried in Portland, Connecticut, and the dominant rowhouse facing from the 1850s to the 1880s.",
+   "spot": "Chocolate-brown stone that flakes and spalls with age. Usually a thin veneer over brick, so restorations often use tinted stucco.",
+   "ex": [
+    "Rows in Park Slope, Bedford-Stuyvesant and Harlem"
+   ],
+   "confuse": [
+    "brownstone-lingo"
+   ],
+   "q": "brownstone Brooklyn",
+   "wiki": "Brownstone"
+  },
+  {
+   "id": "limestone",
+   "term": "Limestone",
+   "def": "A pale, fine-grained sedimentary stone, mostly from Indiana, that carves crisply; the dress of Beaux-Arts and prewar luxury buildings.",
+   "spot": "Smooth cream or buff stone with sharp carving. Limestone townhouses stand out in brownstone rows from the 1890s on.",
+   "ex": [
+    "15 Central Park West",
+    "Fifth Avenue mansions of the Upper East Side"
+   ],
+   "confuse": [
+    "brownstone-stone",
+    "marble"
+   ],
+   "q": "limestone mansion Fifth Avenue",
+   "wiki": "Indiana limestone"
+  },
+  {
+   "id": "marble",
+   "term": "Marble",
+   "def": "Metamorphic limestone that takes a polish; in New York, much of it white Tuckahoe and Inwood marble.",
+   "spot": "Brilliant white stone with faint veining; outdoors it weathers to a sugary surface.",
+   "ex": [
+    "Tweed Courthouse, 52 Chambers St",
+    "Sun Building (former A.T. Stewart store), 280 Broadway"
+   ],
+   "confuse": [
+    "limestone"
+   ],
+   "q": "Tweed Courthouse New York",
+   "wiki": "Tweed Courthouse"
+  },
+  {
+   "id": "granite",
+   "term": "Granite",
+   "def": "A hard, speckled igneous stone used for bases, steps and heavy structures.",
+   "spot": "Salt-and-pepper or pink speckles; often the first floor or the stoop, under softer stone.",
+   "ex": [
+    "Towers of the Brooklyn Bridge",
+    "Base of the Federal Reserve Bank, 33 Liberty St"
+   ],
+   "q": "Brooklyn Bridge tower",
+   "wiki": "Brooklyn Bridge"
+  },
+  {
+   "id": "flemish-bond",
+   "term": "Flemish bond",
+   "def": "Brickwork with long sides (stretchers) and short ends (headers) alternating within every course.",
+   "spot": "Each row goes long-short-long-short, often with darker glazed headers. The giveaway of a Federal house.",
+   "ex": [
+    "Federal houses in the Charlton–King–Vandam Historic District"
+   ],
+   "confuse": [
+    "running-bond",
+    "common-bond"
+   ],
+   "q": "Flemish bond brickwork",
+   "wiki": "Flemish bond"
+  },
+  {
+   "id": "running-bond",
+   "term": "Running bond",
+   "def": "Brickwork showing only long sides, each course offset by half a brick.",
+   "spot": "No headers at all. Usually means a brick veneer over a steel or concrete frame, so 20th century.",
+   "ex": [
+    "Postwar apartment buildings across the Upper East Side"
+   ],
+   "confuse": [
+    "flemish-bond",
+    "common-bond"
+   ],
+   "q": "stretcher bond brickwork",
+   "wiki": "Brickwork"
+  },
+  {
+   "id": "common-bond",
+   "term": "Common bond",
+   "def": "Brickwork with a row of headers every five to seven courses of stretchers. Also called American bond.",
+   "spot": "Mostly long sides, with a header stripe every sixth row or so; typical of side walls and tenements.",
+   "ex": [
+    "Side walls of 19th-century tenements on the Lower East Side"
+   ],
+   "confuse": [
+    "flemish-bond",
+    "running-bond"
+   ],
+   "q": "common bond American bond brickwork"
+  },
+  {
+   "id": "roman-brick",
+   "term": "Roman brick",
+   "def": "Long, thin brick that stresses horizontal lines, popular around 1890–1915 and again with modernists.",
+   "spot": "Bricks noticeably flatter and longer than usual, often tan or buff.",
+   "ex": [
+    "Turn-of-the-century townhouses in the Upper East Side Historic District"
+   ],
+   "q": "roman brick house Chicago",
+   "wiki": "Roman brick",
+   "noPhoto": true
+  },
+  {
+   "id": "terra-cotta",
+   "term": "Architectural terra cotta",
+   "def": "Fired clay molded into ornament or wall cladding, lighter and cheaper than carved stone.",
+   "spot": "Repeating ornament with crisp identical copies, sometimes glazed to look like stone.",
+   "ex": [
+    "Woolworth Building, 233 Broadway",
+    "Bayard–Condict Building, 65 Bleecker St"
+   ],
+   "confuse": [
+    "limestone"
+   ],
+   "q": "Bayard-Condict Building",
+   "wiki": "Bayard–Condict Building"
+  },
+  {
+   "id": "cast-iron",
+   "term": "Cast iron",
+   "def": "Iron poured into molds, used for prefabricated facades, columns, railings and stoop newels.",
+   "spot": "Repeated, sharp ornament painted to look like stone; often with rust where the paint chips.",
+   "ex": [
+    "SoHo–Cast Iron Historic District"
+   ],
+   "confuse": [
+    "pressed-metal"
+   ],
+   "q": "SoHo cast iron building Greene Street",
+   "wiki": "SoHo–Cast Iron Historic District"
+  },
+  {
+   "id": "pressed-metal",
+   "term": "Pressed metal",
+   "def": "Thin galvanized sheet metal stamped into ornament, used for cornices, bay windows and ceilings.",
+   "spot": "Brownstone cornices are usually this, not stone. Indoors, it's the \"tin ceiling\".",
+   "ex": [
+    "Cornices on most brownstone rows",
+    "Tin ceilings in old storefronts"
+   ],
+   "confuse": [
+    "cast-iron"
+   ],
+   "q": "pressed tin ceiling",
+   "wiki": "Tin ceiling"
+  },
+  {
+   "id": "guastavino",
+   "term": "Guastavino tile",
+   "def": "Thin interlocking tiles laid in layers to form self-supporting vaults, patented by Rafael Guastavino in the 1880s.",
+   "spot": "Herringbone-patterned tile vaults overhead with no visible supports.",
+   "ex": [
+    "Grand Central Oyster Bar, Grand Central Terminal",
+    "Former City Hall subway station"
+   ],
+   "q": "Guastavino Oyster Bar",
+   "wiki": "Guastavino tile"
+  },
+  {
+   "id": "bluestone",
+   "term": "Bluestone",
+   "def": "A blue-gray sandstone split into large flat slabs, used for sidewalks, steps and garden paths.",
+   "spot": "Big, uneven gray slabs on old sidewalks in front of brownstones.",
+   "ex": [
+    "Sidewalks of Brooklyn Heights and Greenwich Village"
+   ],
+   "q": "bluestone sidewalk",
+   "wiki": "Bluestone"
+  },
+  {
+   "id": "copper-patina",
+   "term": "Copper patina (verdigris)",
+   "def": "The green coating copper forms as it weathers outdoors.",
+   "spot": "Pale green roofs, dormers, cornices and spires.",
+   "ex": [
+    "The Statue of Liberty",
+    "Copper dormers and cresting on The Plaza, 768 Fifth Ave"
+   ],
+   "q": "copper roof patina green",
+   "wiki": "Verdigris"
+  },
+  {
+   "id": "glazed-brick",
+   "term": "Glazed brick",
+   "def": "Brick with a fired glassy finish that resists dirt; white versions defined postwar \"white-brick\" buildings.",
+   "spot": "Shiny brick that reflects light, often white or pale gray.",
+   "ex": [
+    "Manhattan House, 200 East 66th St"
+   ],
+   "confuse": [
+    "postwar-brick"
+   ],
+   "q": "Manhattan House New York",
+   "wiki": "Manhattan House"
+  }
+ ]
+}

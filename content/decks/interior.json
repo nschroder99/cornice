@@ -1,0 +1,464 @@
+{
+ "id": "interior",
+ "name": "Interior",
+ "terms": [
+  {
+   "id": "parlor-floor",
+   "term": "Parlor floor",
+   "def": "The main floor of a rowhouse, reached by the stoop, with the tallest ceilings and grandest rooms.",
+   "spot": "One flight up from the sidewalk: double parlors, ornate plaster, the best mantels.",
+   "ex": [
+    "Merchant's House Museum, 29 East 4th St"
+   ],
+   "confuse": [
+    "piano-nobile",
+    "english-basement"
+   ],
+   "q": "brownstone parlor",
+   "wiki": "Merchant's House Museum"
+  },
+  {
+   "id": "double-parlor",
+   "term": "Double parlor",
+   "def": "Two connected front and rear parlors, typically divided by pocket doors or a columned screen.",
+   "spot": "Two matched rooms, each with a mantel, opening into each other through a wide doorway.",
+   "ex": [
+    "Merchant's House Museum, 29 East 4th St"
+   ],
+   "confuse": [
+    "enfilade"
+   ],
+   "q": "Merchant's House Museum parlor",
+   "wiki": "Merchant's House Museum"
+  },
+  {
+   "id": "enfilade",
+   "term": "Enfilade",
+   "def": "A row of rooms whose doorways line up, so you can see straight through all of them.",
+   "spot": "Stand in one room and look through a series of aligned doors.",
+   "ex": [
+    "Fifth Avenue prewar co-ops along the park"
+   ],
+   "confuse": [
+    "double-parlor",
+    "railroad"
+   ],
+   "q": "enfilade",
+   "wiki": "Enfilade (architecture)"
+  },
+  {
+   "id": "pocket-doors",
+   "term": "Pocket doors",
+   "def": "Sliding doors that disappear into a cavity in the wall.",
+   "spot": "A wide opening between parlors with brass pulls showing at the door edges.",
+   "ex": [
+    "Most Italianate brownstones"
+   ],
+   "q": "pocket doors",
+   "wiki": "Pocket door"
+  },
+  {
+   "id": "ceiling-medallion",
+   "term": "Ceiling medallion",
+   "def": "A round or oval plaster ornament on the ceiling, where a gas chandelier once hung.",
+   "spot": "A circle of plaster leaves or rings in the center of the ceiling.",
+   "ex": [
+    "Parlors of brownstones in Park Slope and Harlem"
+   ],
+   "q": "ceiling medallion",
+   "wiki": "Ceiling rose"
+  },
+  {
+   "id": "crown-molding",
+   "term": "Crown molding",
+   "def": "Molding running along the top of a wall where it meets the ceiling.",
+   "spot": "Deep layered plaster at the ceiling edge; in brownstones it's often called the plaster cornice.",
+   "ex": [
+    "Prewar apartments and brownstone parlors citywide"
+   ],
+   "confuse": [
+    "cove-ceiling",
+    "picture-rail"
+   ],
+   "q": "crown molding",
+   "wiki": "Crown molding"
+  },
+  {
+   "id": "cove-ceiling",
+   "term": "Cove ceiling",
+   "def": "A ceiling that curves into the wall instead of meeting it at a sharp angle.",
+   "spot": "A smooth concave sweep where wall becomes ceiling.",
+   "ex": [
+    "Living rooms of 1920s prewar co-ops"
+   ],
+   "confuse": [
+    "crown-molding"
+   ],
+   "q": "cove ceiling",
+   "wiki": "Coving",
+   "noPhoto": true
+  },
+  {
+   "id": "coffered-ceiling",
+   "term": "Coffered ceiling",
+   "def": "A ceiling divided into a grid of sunken panels.",
+   "spot": "Recessed square or octagonal boxes overhead, framed by beams.",
+   "ex": [
+    "Libraries of Upper East Side townhouses"
+   ],
+   "confuse": [
+    "beamed-ceiling"
+   ],
+   "q": "coffered ceiling library",
+   "wiki": "Coffer"
+  },
+  {
+   "id": "beamed-ceiling",
+   "term": "Beamed ceiling",
+   "def": "A ceiling crossed by exposed or decorative beams running one direction.",
+   "spot": "Parallel beams, not a grid. Tudor and Arts and Crafts rooms love them.",
+   "ex": [
+    "Tudor Revival rooms in prewar co-ops"
+   ],
+   "confuse": [
+    "coffered-ceiling"
+   ],
+   "q": "beamed ceiling dining room"
+  },
+  {
+   "id": "picture-rail",
+   "term": "Picture rail",
+   "def": "A narrow molding a foot or two below the ceiling, made for hanging pictures on hooks and wire.",
+   "spot": "A thin strip running around the room, well below the crown molding.",
+   "ex": [
+    "Prewar apartments throughout the Upper West Side"
+   ],
+   "confuse": [
+    "chair-rail",
+    "crown-molding"
+   ],
+   "q": "picture rail",
+   "wiki": "Picture rail",
+   "noPhoto": true
+  },
+  {
+   "id": "chair-rail",
+   "term": "Chair rail",
+   "def": "A horizontal molding around a room at about chair-back height, to protect the wall.",
+   "spot": "A strip about three feet off the floor, often capping wainscoting.",
+   "ex": [
+    "Dining rooms of prewar classic sixes"
+   ],
+   "confuse": [
+    "picture-rail",
+    "wainscoting"
+   ],
+   "q": "chair rail dining room",
+   "wiki": "Dado rail",
+   "noPhoto": true
+  },
+  {
+   "id": "wainscoting",
+   "term": "Wainscoting",
+   "def": "Paneling covering the lower part of a wall.",
+   "spot": "Wood or plaster panels from the floor up to a rail at about waist height.",
+   "ex": [
+    "Entry halls and dining rooms in prewar co-ops"
+   ],
+   "confuse": [
+    "chair-rail"
+   ],
+   "q": "wainscoting wood paneling",
+   "wiki": "Panelling"
+  },
+  {
+   "id": "boiserie",
+   "term": "Boiserie",
+   "def": "Carved, often painted or gilded, French wood paneling covering whole walls.",
+   "spot": "Floor-to-ceiling panels with curving frames, Louis XV or XVI style.",
+   "ex": [
+    "Period rooms in the Frick Collection, 1 East 70th St"
+   ],
+   "confuse": [
+    "wainscoting"
+   ],
+   "q": "boiserie paneling French",
+   "wiki": "Boiserie"
+  },
+  {
+   "id": "herringbone",
+   "term": "Herringbone floor",
+   "def": "Parquet with rectangular blocks laid in a zigzag where ends meet at right angles, staggered.",
+   "spot": "Ends of the boards butt against the sides of their neighbors, like a broken zigzag.",
+   "ex": [
+    "Prewar co-ops citywide"
+   ],
+   "confuse": [
+    "chevron"
+   ],
+   "q": "herringbone parquet floor",
+   "wiki": "Herringbone pattern"
+  },
+  {
+   "id": "chevron",
+   "term": "Chevron floor",
+   "def": "Parquet with boards cut at an angle so they meet in a clean point, forming continuous Vs.",
+   "spot": "A crisp unbroken V down the room. Ends are mitered, unlike herringbone.",
+   "ex": [
+    "New luxury condos and Parisian-style renovations"
+   ],
+   "confuse": [
+    "herringbone"
+   ],
+   "q": "chevron parquet"
+  },
+  {
+   "id": "inlaid-border",
+   "term": "Inlaid border",
+   "def": "A decorative band of contrasting wood set around the edge of a floor.",
+   "spot": "A stripe or Greek-key pattern of darker wood framing the room.",
+   "ex": [
+    "Brownstone parlors and prewar living rooms"
+   ],
+   "confuse": [
+    "marquetry"
+   ],
+   "q": "parquet floor border inlay",
+   "noPhoto": true
+  },
+  {
+   "id": "marquetry",
+   "term": "Marquetry",
+   "def": "Pictures or patterns made of shaped veneers of different woods fitted together.",
+   "spot": "Flowers, stars or scrolls made of contrasting wood on a floor or furniture.",
+   "ex": [
+    "Gilded Age mansions such as the Frick Collection"
+   ],
+   "confuse": [
+    "inlaid-border"
+   ],
+   "q": "marquetry floor",
+   "wiki": "Marquetry"
+  },
+  {
+   "id": "newel-post",
+   "term": "Newel post",
+   "def": "The large post at the bottom (or turns) of a staircase that anchors the handrail.",
+   "spot": "The heavy carved post where the banister starts.",
+   "ex": [
+    "Stair halls of Brooklyn brownstones"
+   ],
+   "confuse": [
+    "baluster"
+   ],
+   "q": "newel post",
+   "wiki": "Newel"
+  },
+  {
+   "id": "baluster",
+   "term": "Balusters",
+   "def": "The short posts between a stair's handrail and its steps.",
+   "spot": "The row of turned spindles under the handrail.",
+   "ex": [
+    "Brownstone stairs"
+   ],
+   "confuse": [
+    "newel-post"
+   ],
+   "q": "staircase balusters wooden",
+   "wiki": "Baluster"
+  },
+  {
+   "id": "stair-skylight",
+   "term": "Stairwell skylight",
+   "def": "A skylight, often with an oval opening below it, lighting a rowhouse stair from the roof.",
+   "spot": "Look straight up the stair hall: glass at the top floor, sometimes over an oval well.",
+   "ex": [
+    "Italianate brownstones in Brooklyn"
+   ],
+   "q": "stairwell skylight",
+   "wiki": "Skylight"
+  },
+  {
+   "id": "transom",
+   "term": "Transom",
+   "def": "A window above a door, often hinged to open, for air and light between rooms or into a hall.",
+   "spot": "A rectangular pane over interior or entry doors.",
+   "ex": [
+    "Old-law tenement apartments",
+    "Brownstone doorways"
+   ],
+   "confuse": [
+    "fanlight"
+   ],
+   "q": "transom window over door",
+   "wiki": "Transom (architecture)"
+  },
+  {
+   "id": "vestibule",
+   "term": "Vestibule",
+   "def": "A small entry room between an outer and inner set of doors.",
+   "spot": "Two sets of doors at a brownstone entrance, often with an encaustic tile floor between.",
+   "ex": [
+    "Brownstones throughout Brooklyn and Harlem"
+   ],
+   "confuse": [
+    "gallery"
+   ],
+   "q": "vestibule tile floor doors",
+   "wiki": "Vestibule (architecture)",
+   "noPhoto": true
+  },
+  {
+   "id": "encaustic-tile",
+   "term": "Encaustic tile",
+   "def": "Tile with a pattern made of different colored clays inlaid, not painted, so it doesn't wear off.",
+   "spot": "Geometric multi-colored tile floors in vestibules and hallways.",
+   "ex": [
+    "Brownstone vestibules",
+    "Lobbies of old tenements"
+   ],
+   "confuse": [
+    "hex-tile"
+   ],
+   "q": "encaustic tile floor",
+   "wiki": "Encaustic tile"
+  },
+  {
+   "id": "hex-tile",
+   "term": "Hexagonal tile",
+   "def": "Small white six-sided ceramic floor tile, standard in prewar bathrooms.",
+   "spot": "Tiny white hexagons, sometimes with a black border or flower pattern.",
+   "ex": [
+    "Original prewar bathrooms"
+   ],
+   "confuse": [
+    "encaustic-tile",
+    "subway-tile"
+   ],
+   "q": "hexagonal tile floor",
+   "wiki": "Tile"
+  },
+  {
+   "id": "subway-tile",
+   "term": "Subway tile",
+   "def": "Glazed 3×6-inch rectangular ceramic tile, introduced in the city's first subway stations in 1904.",
+   "spot": "White rectangular tiles in a running-bond pattern, usually on walls.",
+   "ex": [
+    "Early IRT subway stations"
+   ],
+   "confuse": [
+    "hex-tile"
+   ],
+   "q": "subway tile wall New York station",
+   "wiki": "Subway tile"
+  },
+  {
+   "id": "marble-mantel",
+   "term": "Arched marble mantel",
+   "def": "An Italianate fireplace surround of white or colored marble with a round-arched opening and a carved keystone.",
+   "spot": "The curved fireplace opening is the tell; Greek Revival mantels are square instead.",
+   "ex": [
+    "Brownstone parlors of the 1850s–1870s"
+   ],
+   "confuse": [
+    "greek-revival-mantel"
+   ],
+   "q": "marble fireplace mantel",
+   "wiki": "Mantelpiece"
+  },
+  {
+   "id": "greek-revival-mantel",
+   "term": "Post-and-lintel mantel",
+   "def": "A Greek Revival fireplace surround: plain columns or pilasters holding a flat shelf, often black or gray marble.",
+   "spot": "Square opening, severe and architectural.",
+   "ex": [
+    "Merchant's House Museum, 29 East 4th St"
+   ],
+   "confuse": [
+    "marble-mantel"
+   ],
+   "q": "Greek Revival fireplace"
+  },
+  {
+   "id": "pier-mirror",
+   "term": "Pier mirror",
+   "def": "A tall mirror set between two windows (on the pier) or over a mantel, often in a gilded frame.",
+   "spot": "Floor-to-ceiling gilt mirrors in brownstone parlors.",
+   "ex": [
+    "Merchant's House Museum, 29 East 4th St"
+   ],
+   "q": "pier mirror",
+   "wiki": "Pier glass"
+  },
+  {
+   "id": "interior-shutters",
+   "term": "Interior shutters",
+   "def": "Folding wooden shutters that fold into recesses beside the windows.",
+   "spot": "Deep window jambs with panels that unfold across the glass.",
+   "ex": [
+    "Original brownstone parlors"
+   ],
+   "q": "interior shutters",
+   "wiki": "Window shutter"
+  },
+  {
+   "id": "gallery",
+   "term": "Gallery",
+   "def": "In a prewar apartment, a formal entry hall large enough for furniture and art, from which rooms open.",
+   "spot": "A room, not a hallway, between the front door and the living room.",
+   "ex": [
+    "Rosario Candela co-ops such as 740 Park Ave"
+   ],
+   "confuse": [
+    "vestibule"
+   ],
+   "q": "apartment entrance hall",
+   "wiki": "Foyer"
+  },
+  {
+   "id": "butlers-pantry",
+   "term": "Butler's pantry",
+   "def": "A service room between kitchen and dining room, with cabinets, a sink and a swinging door.",
+   "spot": "A passage-like room lined with glass-front cabinets.",
+   "ex": [
+    "Prewar classic sevens and larger"
+   ],
+   "q": "butler's pantry",
+   "wiki": "Butler's pantry"
+  },
+  {
+   "id": "dumbwaiter",
+   "term": "Dumbwaiter",
+   "def": "A small hand-pulled elevator for carrying food and goods between floors.",
+   "spot": "A little door in a wall at counter height, often painted shut.",
+   "ex": [
+    "Brownstones and prewar service corridors"
+   ],
+   "q": "dumbwaiter",
+   "wiki": "Dumbwaiter"
+  },
+  {
+   "id": "sunken-living-room",
+   "term": "Sunken living room",
+   "def": "A living room set a step or two below the surrounding floor.",
+   "spot": "Steps down from the gallery into the living room; common in 1950s–60s postwar buildings.",
+   "ex": [
+    "Postwar co-ops on the Upper East Side"
+   ],
+   "q": "sunken living room",
+   "noPhoto": true
+  },
+  {
+   "id": "lincrusta",
+   "term": "Lincrusta",
+   "def": "A Victorian embossed wallcovering made of linseed paste, painted to look like carved plaster or leather.",
+   "spot": "Raised patterns on walls or dados in stair halls, often under layers of paint.",
+   "ex": [
+    "Victorian rowhouses in Brooklyn"
+   ],
+   "q": "Lincrusta wallcovering",
+   "wiki": "Lincrusta"
+  }
+ ]
+}

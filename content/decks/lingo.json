@@ -1,0 +1,363 @@
+{
+ "id": "lingo",
+ "name": "Building types & lingo",
+ "terms": [
+  {
+   "id": "rowhouse",
+   "term": "Rowhouse",
+   "def": "An attached house sharing side walls (party walls) with its neighbors in a continuous row.",
+   "spot": "Identical or related facades in an unbroken line along the block.",
+   "ex": [
+    "Brooklyn Heights Historic District"
+   ],
+   "confuse": [
+    "townhouse"
+   ],
+   "q": "rowhouses Brooklyn",
+   "wiki": "Terraced house"
+  },
+  {
+   "id": "townhouse",
+   "term": "Townhouse",
+   "def": "In New York usage, any single-family (or small multi-family) house in the city, row or freestanding; originally a rich family's city residence.",
+   "spot": "Real estate shorthand, often for a wider or grander house.",
+   "ex": [
+    "East 70s between Fifth and Park"
+   ],
+   "confuse": [
+    "rowhouse",
+    "brownstone-lingo"
+   ],
+   "q": "Upper East Side townhouse",
+   "wiki": "Townhouse"
+  },
+  {
+   "id": "brownstone-lingo",
+   "term": "\"Brownstone\" (the word)",
+   "def": "New York shorthand for almost any 19th-century rowhouse, whether faced in brownstone, brick or limestone.",
+   "spot": "If someone calls a red-brick Greek Revival house a brownstone, they're using it this way.",
+   "ex": [
+    "Rowhouse blocks citywide"
+   ],
+   "confuse": [
+    "brownstone-stone",
+    "rowhouse"
+   ],
+   "q": "brownstone rowhouses Harlem"
+  },
+  {
+   "id": "party-wall",
+   "term": "Party wall",
+   "def": "A wall shared by two adjoining buildings, owned jointly.",
+   "spot": "The side walls of a rowhouse. Ask what's shared before structural work.",
+   "ex": [
+    "Every rowhouse block"
+   ],
+   "q": "party wall",
+   "wiki": "Party wall"
+  },
+  {
+   "id": "floor-through",
+   "term": "Floor-through",
+   "def": "An apartment that occupies an entire floor of a rowhouse, with windows front and back.",
+   "spot": "Front and rear exposures in one unit.",
+   "ex": [
+    "Brownstone rentals in Brooklyn and Harlem"
+   ],
+   "confuse": [
+    "railroad"
+   ],
+   "q": "brownstone apartment living room",
+   "noPhoto": true
+  },
+  {
+   "id": "railroad",
+   "term": "Railroad apartment",
+   "def": "An apartment whose rooms are lined up one behind the next, with no hallway.",
+   "spot": "You walk through each room to reach the next, like train cars.",
+   "ex": [
+    "Tenements in the East Village and Greenpoint"
+   ],
+   "confuse": [
+    "enfilade",
+    "floor-through"
+   ],
+   "q": "tenement apartment interior",
+   "wiki": "Railroad apartment",
+   "noPhoto": true
+  },
+  {
+   "id": "old-law-tenement",
+   "term": "Old-law tenement",
+   "def": "Walk-up apartment buildings built under the 1879 law, many with a \"dumbbell\" plan pinched in the middle for an airshaft.",
+   "spot": "Five or six stories, narrow lot, front fire escape; interior rooms lit by a tiny shaft.",
+   "ex": [
+    "Tenement Museum, 97 Orchard St"
+   ],
+   "confuse": [
+    "new-law-tenement"
+   ],
+   "q": "97 Orchard Street Tenement Museum",
+   "wiki": "Tenement Museum"
+  },
+  {
+   "id": "new-law-tenement",
+   "term": "New-law tenement",
+   "def": "Apartment buildings built after the Tenement House Act of 1901, which required larger courts, windows in every room and indoor toilets.",
+   "spot": "Wider buildings, often on two or more lots, with real courtyards.",
+   "ex": [
+    "Walk-ups in Washington Heights and the South Bronx"
+   ],
+   "confuse": [
+    "old-law-tenement"
+   ],
+   "q": "Washington Heights apartment building",
+   "wiki": "Tenement"
+  },
+  {
+   "id": "light-court",
+   "term": "Light court",
+   "def": "An open court cut into a building's footprint to bring light and air to inner rooms.",
+   "spot": "A U, H or E-shaped building plan with an open notch facing the street or rear.",
+   "ex": [
+    "Prewar apartment buildings along Riverside Drive"
+   ],
+   "confuse": [
+    "airshaft"
+   ],
+   "q": "apartment building light court New York",
+   "wiki": "Light court"
+  },
+  {
+   "id": "airshaft",
+   "term": "Airshaft",
+   "def": "A narrow vertical shaft between or within buildings, meant to ventilate interior rooms.",
+   "spot": "Windows facing a brick wall a few feet away.",
+   "ex": [
+    "Old-law tenements on the Lower East Side"
+   ],
+   "confuse": [
+    "light-court"
+   ],
+   "q": "airshaft tenement",
+   "wiki": "Air shaft"
+  },
+  {
+   "id": "french-flat",
+   "term": "French flat",
+   "def": "The first respectable middle-class apartment houses, from the 1870s, borrowed from Paris to overcome the stigma of tenement living.",
+   "spot": "1870s–1880s apartment buildings with modest ornament, often with stores at the base.",
+   "ex": [
+    "Stuyvesant Apartments, East 18th St (1870, Richard Morris Hunt; demolished)"
+   ],
+   "confuse": [
+    "old-law-tenement",
+    "apartment-hotel"
+   ],
+   "q": "Stuyvesant Apartments",
+   "wiki": "Stuyvesant Apartments"
+  },
+  {
+   "id": "apartment-hotel",
+   "term": "Apartment hotel",
+   "def": "A building of suites without full kitchens, served by a central kitchen and hotel staff.",
+   "spot": "Grand early-1900s buildings; many units now have converted kitchens.",
+   "ex": [
+    "The Ansonia, 2109 Broadway"
+   ],
+   "confuse": [
+    "french-flat"
+   ],
+   "q": "Ansonia building Broadway",
+   "wiki": "The Ansonia"
+  },
+  {
+   "id": "prewar",
+   "term": "Prewar",
+   "def": "Built before World War II, typically 1900–1940, prized for thick walls, high ceilings and gracious layouts.",
+   "spot": "Plaster walls, 9–11 foot ceilings, formal entry gallery, separate dining room, solid hardwood floors.",
+   "ex": [
+    "Classic co-ops on West End Ave and Park Ave"
+   ],
+   "confuse": [
+    "postwar"
+   ],
+   "q": "West End Avenue apartment building"
+  },
+  {
+   "id": "postwar",
+   "term": "Postwar",
+   "def": "Built after World War II, roughly 1945–1980, usually with lower ceilings and more open layouts than prewar.",
+   "spot": "8-foot ceilings, balconies, through-wall air conditioning sleeves, simple lobbies.",
+   "ex": [
+    "East Side towers along Second and Third Avenues"
+   ],
+   "confuse": [
+    "prewar",
+    "postwar-brick"
+   ],
+   "q": "Upper East Side apartment tower"
+  },
+  {
+   "id": "tower-in-park",
+   "term": "Tower in the park",
+   "def": "Postwar planning that set apartment towers in open lawns and plazas instead of along the street.",
+   "spot": "Repeated towers on a superblock with no through streets.",
+   "ex": [
+    "Stuyvesant Town–Peter Cooper Village",
+    "Penn South, Chelsea"
+   ],
+   "q": "Stuyvesant Town buildings",
+   "wiki": "Stuyvesant Town–Peter Cooper Village"
+  },
+  {
+   "id": "garden-apartments",
+   "term": "Garden apartments",
+   "def": "Low-rise apartment buildings grouped around shared interior gardens.",
+   "spot": "Four- to six-story buildings wrapping a private landscaped block interior.",
+   "ex": [
+    "Jackson Heights Historic District, Queens"
+   ],
+   "q": "Jackson Heights garden apartments",
+   "wiki": "Jackson Heights Historic District",
+   "noPhoto": true
+  },
+  {
+   "id": "carriage-house",
+   "term": "Carriage house",
+   "def": "A former stable for horses and carriages, often now a house.",
+   "spot": "Wide arched ground-floor openings where carriage doors were; hayloft doors above.",
+   "ex": [
+    "Sniffen Court, East 36th St",
+    "Washington Mews"
+   ],
+   "confuse": [
+    "mews"
+   ],
+   "q": "Sniffen Court",
+   "wiki": "Sniffen Court Historic District"
+  },
+  {
+   "id": "mews",
+   "term": "Mews",
+   "def": "A small lane of former stables and carriage houses behind grand houses.",
+   "spot": "A gated, cobbled lane of low buildings.",
+   "ex": [
+    "Washington Mews, off Fifth Ave",
+    "MacDougal Alley"
+   ],
+   "confuse": [
+    "carriage-house"
+   ],
+   "q": "Washington Mews",
+   "wiki": "Washington Mews"
+  },
+  {
+   "id": "loft",
+   "term": "Loft",
+   "def": "A former manufacturing or warehouse space with high ceilings, big windows and open floors, converted to residential use.",
+   "spot": "Columns in the middle of the room, 12-foot-plus ceilings, oversized windows, freight elevator.",
+   "ex": [
+    "SoHo and Tribeca loft buildings"
+   ],
+   "confuse": [
+    "cast-iron-facade"
+   ],
+   "q": "Tribeca loft building",
+   "wiki": "Loft"
+  },
+  {
+   "id": "penthouse",
+   "term": "Penthouse",
+   "def": "Originally a small structure on a roof; now the top-floor apartment, often with terraces on the setbacks.",
+   "spot": "Top-floor units set back from the facade, with terraces.",
+   "ex": [
+    "Setback terraces of Central Park West towers"
+   ],
+   "confuse": [
+    "setback"
+   ],
+   "q": "penthouse terrace setback New York",
+   "wiki": "Penthouse apartment"
+  },
+  {
+   "id": "podium",
+   "term": "Podium",
+   "def": "The broad lower base of a tower, often lining the street, from which a slimmer tower rises.",
+   "spot": "A block of a few stories filling the lot, then a narrower tower above.",
+   "ex": [
+    "One57, 157 West 57th St",
+    "Many new Midtown condos"
+   ],
+   "q": "One57 West 57th Street",
+   "wiki": "One57"
+  },
+  {
+   "id": "supertall",
+   "term": "Supertall",
+   "def": "A skyscraper at least 300 meters (about 984 feet) tall.",
+   "spot": "Billionaires' Row along 57th Street is the densest cluster.",
+   "ex": [
+    "Central Park Tower, 225 West 57th St",
+    "111 West 57th St"
+   ],
+   "confuse": [
+    "pencil-tower"
+   ],
+   "q": "Billionaires Row",
+   "wiki": "Billionaires' Row"
+  },
+  {
+   "id": "pencil-tower",
+   "term": "Pencil tower",
+   "def": "An extremely slender tower, very tall relative to its narrow base.",
+   "spot": "Roughly 10:1 or more height to width. 111 West 57th is about 24:1.",
+   "ex": [
+    "111 West 57th St",
+    "432 Park Ave"
+   ],
+   "confuse": [
+    "supertall",
+    "sliver"
+   ],
+   "q": "111 West 57th Street",
+   "wiki": "Steinway Tower"
+  },
+  {
+   "id": "sliver",
+   "term": "Sliver building",
+   "def": "A tall, narrow building on a small midblock lot, restricted by the 1983 sliver law in many residential districts.",
+   "spot": "A tower squeezed between low buildings on a lot 45 feet wide or less.",
+   "ex": [
+    "Narrow 1970s–80s towers on Upper East Side side streets"
+   ],
+   "confuse": [
+    "pencil-tower"
+   ],
+   "q": "narrow building Manhattan",
+   "wiki": "Sliver building"
+  },
+  {
+   "id": "air-rights",
+   "term": "Air rights",
+   "def": "Unused development rights above a property that can be sold to an adjoining lot, letting a neighbor build taller.",
+   "spot": "A tower rising over a low landmark next door often bought that landmark's air rights.",
+   "ex": [
+    "Towers around Grand Central using the terminal's transferred rights"
+   ],
+   "q": "Grand Central Terminal One Vanderbilt",
+   "wiki": "One Vanderbilt"
+  },
+  {
+   "id": "landmark",
+   "term": "Landmark / historic district",
+   "def": "A building or area protected by the Landmarks Preservation Commission, created in 1965 after the loss of Penn Station.",
+   "spot": "Exterior changes need LPC approval; a bronze plaque often marks individual landmarks.",
+   "ex": [
+    "Brooklyn Heights, the city's first historic district (1965)"
+   ],
+   "q": "Brooklyn Heights historic district street",
+   "wiki": "Brooklyn Heights"
+  }
+ ]
+}
