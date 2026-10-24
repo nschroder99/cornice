@@ -57,8 +57,6 @@ header.top .row-between { display: flex; justify-content: space-between; align-i
 .bars .track { grid-column: 1 / -1; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
 .bars .fill { height: 100%; background: var(--accent); border-radius: 3px; }
 .bars .n { font-size: .84rem; color: var(--muted); font-variant-numeric: tabular-nums; }
-.banner { background: var(--gold-soft); color: var(--ink); border-radius: 14px; padding: 14px 16px; font-size: .9rem; margin: 0 0 16px; }
-.banner b { color: var(--gold); }
 
 /* Review */
 .session-top { display: flex; align-items: center; gap: 12px; padding: 14px 0 12px; }

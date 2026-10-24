@@ -103,7 +103,6 @@ async function viewToday() {
   const q = await queue();
   const s = await stats();
   const nNew = q.filter(x => x.isNew).length, nDue = q.length - nNew;
-  const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
   const decks = content.decks.map(d => {
     const total = content.byDeck[d.id].length;
     const learned = content.byDeck[d.id].filter(t => cards[t.id] && isLearned(cards[t.id].card)).length;
@@ -114,7 +113,6 @@ async function viewToday() {
   if (stale(seq)) return;
   app.innerHTML = `
     <header class="top"><p class="eyebrow">${new Date().toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' })}</p><h1>Cornice</h1></header>
-    ${standalone ? '' : `<p class="banner"><b>Add to Home Screen</b> so your progress and photos are kept: tap Share, then “Add to Home Screen”.</p>`}
     <section class="hero">
       ${q.length ? `
         <p class="eyebrow">Today’s review</p>
@@ -517,11 +515,13 @@ async function viewSettings() {
   app.innerHTML = `<header class="top"><h1>Settings</h1></header>
     <div class="setting"><span>New terms per day</span><span class="stepper"><button id="minus" aria-label="Fewer">−</button><b id="n">${n}</b><button id="plus" aria-label="More">+</button></span></div>
     <h3>Your data</h3>
-    <p class="small muted">Progress and photos are stored on this phone only${persisted ? ', protected from automatic clearing' : ''}${est ? ` (${(est.usage / 1e6).toFixed(1)} MB)` : ''}. Last backup: ${lastBackup ? new Date(lastBackup).toLocaleDateString() : 'never'}.</p>
+    <p class="small muted">Progress and photos are stored on this device only${persisted ? ', protected from automatic clearing' : ''}${est ? ` (${(est.usage / 1e6).toFixed(1)} MB)` : ''}. Last backup: ${lastBackup ? new Date(lastBackup).toLocaleDateString() : 'never'}.</p>
     <div class="stack">
-      <button class="btn block" id="export">Back up to Files</button>
-      <label class="btn block">Restore from backup<input type="file" accept="application/json,.json" id="import" hidden></label>
+      <button class="btn block" id="export">Back up / send progress</button>
+      <label class="btn block">Merge progress from another device<input type="file" accept="application/json,.json" id="merge" hidden></label>
+      <label class="link small" style="text-align:center">Replace everything with a backup<input type="file" accept="application/json,.json" id="import" hidden></label>
     </div>
+    <p class="small muted">To move progress between your computer and phone: on the device you used, tap <b>Back up / send progress</b> and send the file to the other one (AirDrop works). There, tap <b>Merge progress</b> and pick the file. Each term keeps whichever device reviewed it most recently, and sightings from both are kept.</p>
     <h3>About</h3>
     <p class="small muted">${content.terms.length} terms. Scheduling uses FSRS, which brings each card back just before you’d likely forget it. Photos from Wikimedia Commons; credits on each card.</p>`;
   const setN = async v => { v = Math.max(0, Math.min(30, v)); await db.setSetting('newPerDay', v); document.getElementById('n').textContent = v; };
@@ -540,9 +540,19 @@ async function viewSettings() {
     toast('Backup ready');
     viewSettings();
   };
+  document.getElementById('merge').onchange = async e => {
+    const f = e.target.files[0];
+    if (!f) return;
+    try {
+      const r = await db.mergeAll(JSON.parse(await f.text()), new Set(content.terms.map(t => t.id)));
+      await refresh();
+      toast(`Merged: ${r.cards} term${r.cards === 1 ? '' : 's'} updated, ${r.sightings} sighting${r.sightings === 1 ? '' : 's'} added`);
+      viewSettings();
+    } catch (err) { alert('Could not merge: ' + err.message); }
+  };
   document.getElementById('import').onchange = async e => {
     const f = e.target.files[0];
-    if (!f || !confirm('Replace everything on this phone with this backup?')) return;
+    if (!f || !confirm('Replace everything on this device with this backup? Anything not in the backup will be lost.')) return;
     try {
       await db.importAll(JSON.parse(await f.text()), new Set(content.terms.map(t => t.id)));
       await refresh();
