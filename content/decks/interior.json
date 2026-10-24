@@ -28,7 +28,7 @@
    "confuse": [
     "enfilade"
    ],
-   "q": "Merchant's House Museum parlor",
+   "q": "Merchant's House Museum double parlor",
    "wiki": "Merchant's House Museum"
   },
   {
@@ -80,7 +80,7 @@
     "cove-ceiling",
     "picture-rail"
    ],
-   "q": "crown molding",
+   "q": "plaster cornice ceiling parlor",
    "wiki": "Crown molding"
   },
   {
@@ -168,7 +168,7 @@
    "confuse": [
     "chair-rail"
    ],
-   "q": "wainscoting wood paneling",
+   "q": "raised panel wainscoting dining room",
    "wiki": "Panelling"
   },
   {
@@ -182,13 +182,13 @@
    "confuse": [
     "wainscoting"
    ],
-   "q": "boiserie paneling French",
+   "q": "boiserie period room Metropolitan Museum",
    "wiki": "Boiserie"
   },
   {
    "id": "herringbone",
    "term": "Herringbone floor",
-   "def": "Parquet with rectangular blocks laid in a zigzag where ends meet at right angles, staggered.",
+   "def": "Parquet of equal rectangular boards laid at right angles to each other, the end of each board butting against the side of the next, forming a staggered zigzag.",
    "spot": "Ends of the boards butt against the sides of their neighbors, like a broken zigzag.",
    "ex": [
     "Prewar co-ops citywide"
@@ -265,7 +265,7 @@
    "confuse": [
     "newel-post"
    ],
-   "q": "staircase balusters wooden",
+   "q": "turned balusters staircase",
    "wiki": "Baluster"
   },
   {
@@ -388,7 +388,7 @@
    "ex": [
     "Merchant's House Museum, 29 East 4th St"
    ],
-   "q": "pier mirror",
+   "q": "pier mirror parlor between windows",
    "wiki": "Pier glass"
   },
   {
@@ -399,7 +399,7 @@
    "ex": [
     "Original brownstone parlors"
    ],
-   "q": "interior shutters",
+   "q": "interior folding shutters window",
    "wiki": "Window shutter"
   },
   {
@@ -413,8 +413,9 @@
    "confuse": [
     "vestibule"
    ],
-   "q": "apartment entrance hall",
-   "wiki": "Foyer"
+   "q": "apartment foyer New York prewar",
+   "wiki": "Foyer",
+   "noPhoto": true
   },
   {
    "id": "butlers-pantry",
@@ -424,7 +425,7 @@
    "ex": [
     "Prewar classic sevens and larger"
    ],
-   "q": "butler's pantry",
+   "q": "butler's pantry glass front cabinets",
    "wiki": "Butler's pantry"
   },
   {
@@ -453,11 +454,11 @@
    "id": "lincrusta",
    "term": "Lincrusta",
    "def": "A Victorian embossed wallcovering made of linseed paste, painted to look like carved plaster or leather.",
-   "spot": "Raised patterns on walls or dados in stair halls, often under layers of paint.",
+   "spot": "Raised, repeating patterns on the lower part of stair-hall walls or on ceilings, often buried under layers of paint; tap it and it feels harder than wallpaper.",
    "ex": [
     "Victorian rowhouses in Brooklyn"
    ],
-   "q": "Lincrusta wallcovering",
+   "q": "Lincrusta wall",
    "wiki": "Lincrusta"
   }
  ]

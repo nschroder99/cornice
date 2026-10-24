@@ -5,7 +5,7 @@
   {
    "id": "brownstone-stone",
    "term": "Brownstone (the stone)",
-   "def": "A brown Triassic sandstone, much of it quarried in Portland, Connecticut, and the dominant rowhouse facing from the 1850s to the 1880s.",
+   "def": "A brown sandstone, much of it quarried in Portland, Connecticut, and New Jersey, and the dominant rowhouse facing from the 1850s to the 1880s.",
    "spot": "Chocolate-brown stone that flakes and spalls with age. Usually a thin veneer over brick, so restorations often use tinted stucco.",
    "ex": [
     "Rows in Park Slope, Bedford-Stuyvesant and Harlem"
@@ -29,7 +29,7 @@
     "brownstone-stone",
     "marble"
    ],
-   "q": "limestone mansion Fifth Avenue",
+   "q": "limestone mansion Upper East Side",
    "wiki": "Indiana limestone"
   },
   {
@@ -53,8 +53,7 @@
    "def": "A hard, speckled igneous stone used for bases, steps and heavy structures.",
    "spot": "Salt-and-pepper or pink speckles; often the first floor or the stoop, under softer stone.",
    "ex": [
-    "Towers of the Brooklyn Bridge",
-    "Base of the Federal Reserve Bank, 33 Liberty St"
+    "Towers of the Brooklyn Bridge"
    ],
    "q": "Brooklyn Bridge tower",
    "wiki": "Brooklyn Bridge"
@@ -78,7 +77,7 @@
    "id": "running-bond",
    "term": "Running bond",
    "def": "Brickwork showing only long sides, each course offset by half a brick.",
-   "spot": "No headers at all. Usually means a brick veneer over a steel or concrete frame, so 20th century.",
+   "spot": "No headers (short brick ends) at all. On 20th-century buildings it usually means a brick veneer over a steel or concrete frame, but many 19th-century brick rowhouse fronts also look like this.",
    "ex": [
     "Postwar apartment buildings across the Upper East Side"
    ],
@@ -205,7 +204,7 @@
    "confuse": [
     "postwar-brick"
    ],
-   "q": "Manhattan House New York",
+   "q": "glazed brick facade",
    "wiki": "Manhattan House"
   }
  ]

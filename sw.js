@@ -1,6 +1,6 @@
 // Offline: precache the app and all stock photos; fonts are added to the same cache the first time they load.
 const PRECACHE = 'precache.json';
-const VERSION = '2026-10-24T20:30:23.035Z'; // rewritten by scripts/build-content.js so browsers pick up new content
+const VERSION = '2026-10-24T20:32:56.340Z'; // rewritten by scripts/build-content.js so browsers pick up new content
 
 self.addEventListener('install', e => {
   e.waitUntil((async () => {

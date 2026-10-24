@@ -6,8 +6,8 @@
    "id": "candela",
    "term": "Rosario Candela",
    "era": "1890–1953",
-   "def": "The architect of the most coveted prewar co-ops, famous for intricate duplex and triplex floor plans.",
-   "spot": "Limestone-based Park and Fifth Avenue co-ops of 1927–1931 with grand galleries and staggered floor levels.",
+   "def": "The architect of the most coveted prewar co-ops. His plans are the draw: big galleries that separate living rooms from bedrooms, well-proportioned rooms, service wings, and duplexes fitted together like a puzzle, which is why a Candela apartment commands a premium.",
+   "spot": "Limestone-clad Park and Fifth Avenue co-ops of roughly 1927–1931, often with a plain middle and setback terraces near the top. Inside: a large entry gallery and duplexes on staggered floor levels.",
    "ex": [
     "740 Park Ave (with Arthur Loomis Harmon)",
     "770 Park Ave",
@@ -24,7 +24,7 @@
    "id": "roth",
    "term": "Emery Roth",
    "era": "1871–1948",
-   "def": "Designer of the great twin-towered Central Park West apartment houses; his firm later built many postwar towers.",
+   "def": "Designer of the great twin-towered Central Park West apartment houses; his firm, Emery Roth & Sons, later built many postwar towers. His prewar buildings are among the West Side's most sought-after co-ops for their layouts and park views.",
    "spot": "Prewar towers with ornate crowns, often paired twin towers facing the park.",
    "ex": [
     "The San Remo, 145 Central Park West",
@@ -42,7 +42,7 @@
    "id": "carpenter",
    "term": "J.E.R. Carpenter",
    "era": "1867–1932",
-   "def": "A prolific designer of early Park and Fifth Avenue luxury apartment buildings.",
+   "def": "A prolific designer of early Park and Fifth Avenue luxury apartment buildings, often mentioned in the same breath as Candela. His buildings are known for solid construction and sensible, generous layouts.",
    "spot": "Dignified Renaissance Revival co-ops from the 1910s and 1920s.",
    "ex": [
     "907 Fifth Ave",
@@ -57,9 +57,9 @@
   {
    "id": "mmw",
    "term": "McKim, Mead & White",
-   "era": "active 1879–1919",
+   "era": "founded 1879",
    "def": "The leading American firm of the Gilded Age, masters of Renaissance and classical design.",
-   "spot": "Refined, scholarly classical buildings in stone and brick.",
+   "spot": "Refined, scholarly classical buildings in pale stone or tawny brick, closely copying Italian Renaissance and Roman models, with restrained ornament and careful proportions.",
    "ex": [
     "Villard Houses, 451–457 Madison Ave",
     "The Morgan Library, 225 Madison Ave",
@@ -134,8 +134,8 @@
    "id": "hunt",
    "term": "Richard Morris Hunt",
    "era": "1827–1895",
-   "def": "The first American trained at the École des Beaux-Arts, who brought the style home.",
-   "spot": "Grand classical compositions, French-inspired.",
+   "def": "The first American trained at the École des Beaux-Arts, who brought its grand French classicism home. He also designed the Stuyvesant Apartments (1870), often called the city's first French flat.",
+   "spot": "Symmetrical stone facades with paired columns, arches and heavy sculpture, in the French manner. Few of his New York buildings survive; the Met's Fifth Avenue front is the best place to see his style.",
    "ex": [
     "Fifth Avenue facade of the Metropolitan Museum of Art",
     "Pedestal of the Statue of Liberty"
@@ -260,7 +260,7 @@
    "confuse": [
     "candela"
    ],
-   "q": "220 Central Park South",
+   "q": "15 Central Park West",
    "wiki": "220 Central Park South"
   },
   {
@@ -295,7 +295,7 @@
    "id": "big",
    "term": "BIG (Bjarke Ingels Group)",
    "era": "founded 2005",
-   "def": "Danish firm known for bold geometric shapes that combine courtyard living with tower form.",
+   "def": "Danish firm known for bold geometric shapes, such as VIA 57 West, a pyramid-like building that slopes up from the river around a courtyard, and The XI's pair of twisting towers.",
    "spot": "Sloping, twisting or tilted volumes.",
    "ex": [
     "VIA 57 West, 625 West 57th St",

@@ -129,8 +129,9 @@
     "dentils",
     "brackets"
    ],
-   "q": "modillion cornice",
-   "wiki": "Modillion"
+   "q": "modillion cornice scroll Renaissance Revival New York",
+   "wiki": "Modillion",
+   "noPhoto": true
   },
   {
    "id": "brackets",
@@ -144,7 +145,7 @@
     "modillions",
     "corbel"
    ],
-   "q": "Italianate cornice brackets",
+   "q": "Italianate brownstone cornice brackets Brooklyn",
    "wiki": "Bracket (architecture)"
   },
   {
@@ -242,7 +243,7 @@
    "confuse": [
     "voussoir"
    ],
-   "q": "keystone arch window carved",
+   "q": "carved keystone window arch New York",
    "wiki": "Keystone (architecture)"
   },
   {
@@ -312,7 +313,7 @@
     "doric",
     "corinthian"
    ],
-   "q": "55 Wall Street colonnade",
+   "q": "Ionic capital volute",
    "wiki": "Ionic order"
   },
   {
@@ -361,7 +362,7 @@
   {
    "id": "quoins",
    "term": "Quoins",
-   "def": "Dressed stones or blocks laid at the corners of a building, alternating long and short.",
+   "def": "Large blocks of stone or brick stacked at a building's outside corners, alternating long and short, so the corner looks reinforced.",
    "spot": "A zipper-like pattern of blocks running up the corners, often in a contrasting color.",
    "ex": [
     "Corners of Georgian and Beaux-Arts mansions on the Upper East Side"
@@ -453,7 +454,7 @@
    "confuse": [
     "mansard"
    ],
-   "q": "dormers roof Greenwich Village house"
+   "q": "Federal house dormers Greenwich Village"
   },
   {
    "id": "parapet",
@@ -463,7 +464,8 @@
    "ex": [
     "Tenements and loft buildings across SoHo"
    ],
-   "q": "parapet roofline New York building"
+   "q": "brick parapet tenement New York roofline",
+   "noPhoto": true
   },
   {
    "id": "balustrade",
@@ -476,7 +478,7 @@
    "confuse": [
     "parapet"
    ],
-   "q": "balustrade roofline Beaux-Arts New York",
+   "q": "roof balustrade Beaux-Arts New York",
    "wiki": "Baluster"
   },
   {
@@ -492,7 +494,7 @@
     "portico",
     "arcade"
    ],
-   "q": "loggia New York building"
+   "q": "loggia Renaissance Revival New York"
   },
   {
    "id": "arcade",
@@ -505,7 +507,7 @@
    "confuse": [
     "loggia"
    ],
-   "q": "Haughwout Building",
+   "q": "Haughwout Building facade",
    "wiki": "Arcade (architecture)"
   },
   {
@@ -543,7 +545,7 @@
    "ex": [
     "Aluminum spandrels of the Empire State Building, 350 Fifth Ave"
    ],
-   "q": "Empire State Building aluminum spandrels"
+   "q": "Art Deco spandrel panels Empire State Building aluminum"
   },
   {
    "id": "setback",
@@ -618,7 +620,7 @@
   {
    "id": "curtain-wall",
    "term": "Curtain wall",
-   "def": "A non-load-bearing outer skin of glass and metal hung on a building's frame.",
+   "def": "A thin outer skin of glass and metal hung on a building's steel or concrete frame. It holds up nothing but itself; the frame inside carries the floors.",
    "spot": "A continuous grid of glass and mullions with no visible masonry holding anything up.",
    "ex": [
     "Lever House, 390 Park Ave",
@@ -633,13 +635,12 @@
    "def": "The principal floor of a grand house, raised one story above the ground and given the tallest windows.",
    "spot": "One floor up, with the biggest windows, balconies or most ornament. The parlor floor is New York's version.",
    "ex": [
-    "Villard Houses, 451–457 Madison Ave",
-    "The Frick Collection, 1 East 70th St"
+    "Villard Houses, 451–457 Madison Ave"
    ],
    "confuse": [
     "parlor-floor"
    ],
-   "q": "Villard Houses",
+   "q": "Villard Houses facade Madison Avenue",
    "wiki": "Piano nobile"
   },
   {

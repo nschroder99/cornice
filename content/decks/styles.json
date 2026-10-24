@@ -25,8 +25,7 @@
    "def": "Red-brick rowhouses with flat roofs and temple-inspired doorways, reflecting a fashion for ancient Greece.",
    "spot": "Three full stories with a flat roof and simple cornice, a rectangular transom and sidelights around the door, framed by columns or pilasters.",
    "ex": [
-    "\"The Row,\" 1–13 Washington Square North",
-    "Merchant's House Museum, 29 East 4th St"
+    "\"The Row,\" 1–13 Washington Square North"
    ],
    "confuse": [
     "federal",
@@ -40,7 +39,7 @@
    "term": "Gothic Revival",
    "era": "c. 1840–1870 (churches much later)",
    "def": "A medieval revival using pointed arches, tracery and verticality, mostly for churches.",
-   "spot": "Pointed-arch windows and doors, spires, buttresses, drip moldings.",
+   "spot": "Pointed-arch windows and doors, spires, buttresses (stone piers propping the walls) and tracery (stone ribs dividing a window into patterns). Brownstone or gray stone, strongly vertical.",
    "ex": [
     "Trinity Church, Broadway at Wall St",
     "St. Patrick's Cathedral, Fifth Ave at 50th St"
@@ -73,7 +72,7 @@
    "term": "Second Empire",
    "era": "c. 1860–1880",
    "def": "A style borrowed from Napoleon III's Paris, defined by the mansard roof.",
-   "spot": "Mansard roof with dormers on top of an otherwise Italianate building.",
+   "spot": "A steep mansard roof with dormers on top of an otherwise Italianate building, often topped with iron cresting (a decorative railing along the roof ridge). Common on hotels and stores of the 1860s–70s.",
    "ex": [
     "Gilsey House, 1200 Broadway"
    ],
@@ -96,7 +95,7 @@
    "confuse": [
     "italianate"
    ],
-   "q": "neo-grec rowhouse",
+   "q": "Neo-Grec rowhouse New York",
    "wiki": "Néo-Grec"
   },
   {
@@ -111,7 +110,7 @@
    "confuse": [
     "romanesque-revival"
    ],
-   "q": "Henderson Place Queen Anne",
+   "q": "Henderson Place Historic District",
    "wiki": "Henderson Place Historic District"
   },
   {
@@ -128,14 +127,14 @@
     "queen-anne",
     "gothic-revival"
    ],
-   "q": "Romanesque Revival New York",
+   "q": "Romanesque Revival rowhouse Park Slope",
    "wiki": "Romanesque Revival architecture"
   },
   {
    "id": "renaissance-revival",
    "term": "Renaissance Revival",
    "era": "c. 1880–1920",
-   "def": "Buildings modeled on Italian Renaissance palazzos: symmetrical, layered and restrained.",
+   "def": "Buildings modeled on Italian Renaissance palazzos: symmetrical and restrained, with a heavy base, an even middle and a big cornice. Calmer and flatter than Beaux-Arts, with ornament kept close to the wall.",
    "spot": "A rusticated base, an even middle and a big cornice, with tidy rows of windows and classical trim.",
    "ex": [
     "Villard Houses, 451–457 Madison Ave",
@@ -152,7 +151,7 @@
    "id": "beaux-arts",
    "term": "Beaux-Arts",
    "era": "c. 1890–1920",
-   "def": "Grand, exuberant classicism taught at the École des Beaux-Arts in Paris.",
+   "def": "Grand, exuberant classicism taught at the École des Beaux-Arts in Paris. Compared with Renaissance Revival it is showier: deep projections, paired columns and sculpture that stands out from the wall.",
    "spot": "Pale stone, monumental scale, paired columns, rich sculpture, balustrades and sometimes a mansard roof.",
    "ex": [
     "New York Public Library, Fifth Ave at 42nd St",
@@ -185,7 +184,7 @@
   {
    "id": "postwar-brick",
    "term": "Postwar white and red brick",
-   "era": "c. 1945–1975",
+   "era": "c. 1945–1980",
    "def": "Plain brick apartment slabs built in the housing boom after World War II.",
    "spot": "White or red brick, little ornament, balconies, ribbon or corner windows, lower ceilings than prewar.",
    "ex": [
@@ -202,7 +201,7 @@
    "id": "international-style",
    "term": "International Style",
    "era": "c. 1950–1975",
-   "def": "Modernism with no ornament at all: a pure volume of glass and steel.",
+   "def": "Modernism with no ornament at all: a building reduced to a box of glass and steel. Unlike postwar brick slabs, the walls are glass curtain walls rather than masonry.",
    "spot": "Glass curtain walls, flat tops, regular grids, often a plaza in front.",
    "ex": [
     "Lever House, 390 Park Ave",

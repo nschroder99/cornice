@@ -48,13 +48,14 @@
   {
    "id": "party-wall",
    "term": "Party wall",
-   "def": "A wall shared by two adjoining buildings, owned jointly.",
+   "def": "A single wall shared by two adjoining buildings, usually straddling the property line, with each owner having rights in it. Work on it can affect the neighbor, so it often needs their consent.",
    "spot": "The side walls of a rowhouse. Ask what's shared before structural work.",
    "ex": [
     "Every rowhouse block"
    ],
-   "q": "party wall",
-   "wiki": "Party wall"
+   "q": "exposed party wall New York",
+   "wiki": "Party wall",
+   "noPhoto": true
   },
   {
    "id": "floor-through",
@@ -73,7 +74,7 @@
   {
    "id": "railroad",
    "term": "Railroad apartment",
-   "def": "An apartment whose rooms are lined up one behind the next, with no hallway.",
+   "def": "An apartment whose rooms are lined up one behind the next, with no hallway. Bedrooms are usually pass-through rooms, which matters for roommates and privacy.",
    "spot": "You walk through each room to reach the next, like train cars.",
    "ex": [
     "Tenements in the East Village and Greenpoint"
@@ -89,10 +90,11 @@
   {
    "id": "old-law-tenement",
    "term": "Old-law tenement",
-   "def": "Walk-up apartment buildings built under the 1879 law, many with a \"dumbbell\" plan pinched in the middle for an airshaft.",
+   "def": "Walk-up apartment buildings built under the Tenement House Act of 1879, many with a \"dumbbell\" plan pinched in the middle for an airshaft. Expect small rooms, some with little light, and no elevator.",
    "spot": "Five or six stories, narrow lot, front fire escape; interior rooms lit by a tiny shaft.",
    "ex": [
-    "Tenement Museum, 97 Orchard St"
+    "Five- and six-story walk-ups on the Lower East Side and in the East Village built 1879–1901",
+    "The Tenement Museum, 97 Orchard St, is the earlier pre-law type (1863), built before any light or air rules"
    ],
    "confuse": [
     "new-law-tenement"
@@ -111,7 +113,7 @@
    "confuse": [
     "old-law-tenement"
    ],
-   "q": "Washington Heights apartment building",
+   "q": "tenement courtyard Bronx",
    "wiki": "Tenement"
   },
   {
@@ -125,8 +127,9 @@
    "confuse": [
     "airshaft"
    ],
-   "q": "apartment building light court New York",
-   "wiki": "Light court"
+   "q": "light court apartment building Riverside Drive",
+   "wiki": "Light court",
+   "noPhoto": true
   },
   {
    "id": "airshaft",
@@ -146,7 +149,7 @@
    "id": "french-flat",
    "term": "French flat",
    "def": "The first respectable middle-class apartment houses, from the 1870s, borrowed from Paris to overcome the stigma of tenement living.",
-   "spot": "1870s–1880s apartment buildings with modest ornament, often with stores at the base.",
+   "spot": "1870s–1880s apartment buildings, usually five or six stories with modest ornament and stores at the base; they look like tenements but have larger windows and grander entrances.",
    "ex": [
     "Stuyvesant Apartments, East 18th St (1870, Richard Morris Hunt; demolished)"
    ],
@@ -160,7 +163,7 @@
   {
    "id": "apartment-hotel",
    "term": "Apartment hotel",
-   "def": "A building of suites without full kitchens, served by a central kitchen and hotel staff.",
+   "def": "A building of suites without full kitchens, served by a central kitchen and hotel staff. Most have since become ordinary co-ops, condos or rentals, and some units' kitchens were added later and can be small.",
    "spot": "Grand early-1900s buildings; many units now have converted kitchens.",
    "ex": [
     "The Ansonia, 2109 Broadway"
@@ -174,7 +177,7 @@
   {
    "id": "prewar",
    "term": "Prewar",
-   "def": "Built before World War II, typically 1900–1940, prized for thick walls, high ceilings and gracious layouts.",
+   "def": "Built before World War II, typically 1900–1940, prized for thick walls, high ceilings and gracious layouts. Many are co-ops, so expect board approval and rules on financing and renovations; plumbing and wiring may be original.",
    "spot": "Plaster walls, 9–11 foot ceilings, formal entry gallery, separate dining room, solid hardwood floors.",
    "ex": [
     "Classic co-ops on West End Ave and Park Ave"
@@ -255,7 +258,7 @@
   {
    "id": "loft",
    "term": "Loft",
-   "def": "A former manufacturing or warehouse space with high ceilings, big windows and open floors, converted to residential use.",
+   "def": "A former factory or warehouse floor with high ceilings, big windows and open space, converted to homes. In SoHo and NoHo many lofts were legally limited to certified artists, so check the certificate of occupancy.",
    "spot": "Columns in the middle of the room, 12-foot-plus ceilings, oversized windows, freight elevator.",
    "ex": [
     "SoHo and Tribeca loft buildings"
@@ -270,7 +273,7 @@
    "id": "penthouse",
    "term": "Penthouse",
    "def": "Originally a small structure on a roof; now the top-floor apartment, often with terraces on the setbacks.",
-   "spot": "Top-floor units set back from the facade, with terraces.",
+   "spot": "Top-floor units, often set back from the facade with terraces. In listings, \"PH\" may just mean the top floor, so don't assume outdoor space.",
    "ex": [
     "Setback terraces of Central Park West towers"
    ],
@@ -289,7 +292,7 @@
     "One57, 157 West 57th St",
     "Many new Midtown condos"
    ],
-   "q": "One57 West 57th Street",
+   "q": "One57 base 57th Street",
    "wiki": "One57"
   },
   {
@@ -340,19 +343,19 @@
   {
    "id": "air-rights",
    "term": "Air rights",
-   "def": "Unused development rights above a property that can be sold to an adjoining lot, letting a neighbor build taller.",
+   "def": "Unused development rights above a property that can be sold to a neighboring lot, letting the neighbor build taller. For a buyer, a low building next door with unused rights can mean a future tower and a lost view.",
    "spot": "A tower rising over a low landmark next door often bought that landmark's air rights.",
    "ex": [
     "Towers around Grand Central using the terminal's transferred rights"
    ],
-   "q": "Grand Central Terminal One Vanderbilt",
+   "q": "One Vanderbilt Grand Central Terminal",
    "wiki": "One Vanderbilt"
   },
   {
    "id": "landmark",
    "term": "Landmark / historic district",
-   "def": "A building or area protected by the Landmarks Preservation Commission, created in 1965 after the loss of Penn Station.",
-   "spot": "Exterior changes need LPC approval; a bronze plaque often marks individual landmarks.",
+   "def": "A building or district protected by the Landmarks Preservation Commission, created in 1965 after the loss of Penn Station. Owners need LPC approval for exterior work, including windows and rooftop additions, which adds time and cost.",
+   "spot": "Look up the address on the LPC's map; plaques are not a reliable sign. Within a historic district, every building is covered, even plain ones.",
    "ex": [
     "Brooklyn Heights, the city's first historic district (1965)"
    ],
