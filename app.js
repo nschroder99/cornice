@@ -527,18 +527,41 @@ async function viewSettings() {
   const setN = async v => { v = Math.max(0, Math.min(30, v)); await db.setSetting('newPerDay', v); document.getElementById('n').textContent = v; };
   document.getElementById('minus').onclick = () => setN(+document.getElementById('n').textContent - 1);
   document.getElementById('plus').onclick = () => setN(+document.getElementById('n').textContent + 1);
-  document.getElementById('export').onclick = async () => {
+  // Building the file takes a moment, and Safari only opens the share sheet straight from a tap,
+  // so prepare it first and then offer Share / Download buttons that act on a fresh tap.
+  document.getElementById('export').onclick = async e => {
+    const btn = e.currentTarget;
+    btn.disabled = true; btn.textContent = 'Preparing…';
     const data = await db.exportAll();
     const file = new File([JSON.stringify(data)], `cornice-backup-${new Date().toISOString().slice(0, 10)}.json`, { type: 'application/json' });
-    if (navigator.canShare?.({ files: [file] })) {
-      try { await navigator.share({ files: [file] }); } catch (e) { if (e.name === 'AbortError') return; throw e; }
-    } else {
+    btn.disabled = false; btn.textContent = 'Back up / send progress';
+    const canShare = navigator.canShare?.({ files: [file] });
+    const wrap = document.createElement('div');
+    wrap.className = 'sheet-wrap';
+    wrap.innerHTML = `<div class="sheet" role="dialog" aria-label="Backup ready"><div class="body">
+      <p class="term">Backup ready</p>
+      <p class="spot">${(file.size / 1e6).toFixed(1)} MB · ${data.cards.length} terms · ${data.journal.length} sightings</p>
+      <div class="stack">
+        ${canShare ? '<button class="btn primary block" data-act="share">Share (AirDrop, Messages, Files…)</button>' : ''}
+        <button class="btn ${canShare ? '' : 'primary '}block" data-act="download">Download file</button>
+        <button class="link" data-close>Cancel</button>
+      </div></div></div>`;
+    document.body.append(wrap);
+    const finish = async msg => { wrap.remove(); await db.setSetting('lastBackup', new Date().toISOString()); toast(msg); viewSettings(); };
+    const download = () => {
       const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(file), download: file.name });
-      a.click();
-    }
-    await db.setSetting('lastBackup', new Date().toISOString());
-    toast('Backup ready');
-    viewSettings();
+      document.body.append(a); a.click(); a.remove();
+      finish('Saved to Downloads');
+    };
+    wrap.addEventListener('click', async ev => {
+      const act = ev.target.closest('[data-act]')?.dataset.act;
+      if (ev.target === wrap || ev.target.closest('[data-close]')) return wrap.remove();
+      if (act === 'download') return download();
+      if (act === 'share') {
+        try { await navigator.share({ files: [file] }); finish('Backup sent'); }
+        catch (err) { if (err.name !== 'AbortError') { toast('Sharing didn’t work, downloading instead'); download(); } }
+      }
+    });
   };
   document.getElementById('merge').onchange = async e => {
     const f = e.target.files[0];
