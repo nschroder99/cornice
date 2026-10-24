@@ -5,6 +5,6 @@
   "scripts": {
     "build": "node scripts/build-content.js",
     "check": "node scripts/build-content.js && node scripts/check-content.js",
-    "serve": "python3 -m http.server 8090"
+    "serve": "python3 -m http.server 8090 --bind 127.0.0.1"
   }
 }

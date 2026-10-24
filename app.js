@@ -4,9 +4,12 @@ import { buildPrompt, buildQueue } from './lib/cards.js';
 
 const app = document.getElementById('app');
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+// Lookup tables keyed by ids from links or backups have no prototype, so names like 'constructor'
+// or '__proto__' are simply absent instead of resolving to built-ins.
+const dict = (entries = []) => Object.assign(Object.create(null), Object.fromEntries(entries));
 const dayKey = d => { const x = new Date(d); return `${x.getFullYear()}-${x.getMonth() + 1}-${x.getDate()}`; };
 
-let content, cards = {}, journal = [], photos = {};
+let content, cards = dict(), journal = [], photos = dict();
 const urls = new Map(); // journal blob -> object URL, made once
 
 function blobURL(blob) {
@@ -16,18 +19,18 @@ function blobURL(blob) {
 
 async function load() {
   content = await fetch('content/index.json').then(r => r.json());
-  content.byId = Object.fromEntries(content.terms.map(t => [t.id, t]));
-  content.byDeck = Object.fromEntries(content.decks.map(d => [d.id, content.terms.filter(t => t.deck === d.id)]));
-  content.deckName = Object.fromEntries(content.decks.map(d => [d.id, d.name]));
+  content.byId = dict(content.terms.map(t => [t.id, t]));
+  content.byDeck = dict(content.decks.map(d => [d.id, content.terms.filter(t => t.deck === d.id)]));
+  content.deckName = dict(content.decks.map(d => [d.id, d.name]));
   await refresh();
 }
 
 async function refresh() {
-  cards = Object.fromEntries((await db.getAll('cards')).map(c => [c.termId, c]));
-  journal = (await db.getAll('journal')).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-  photos = {};
+  cards = dict((await db.getAll('cards')).map(c => [c.termId, c]));
+  journal = (await db.getAll('journal')).sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
+  photos = dict();
   for (const t of content.terms) if (t.img) photos[t.id] = [{ src: t.img, mine: false }];
-  for (const j of journal) for (const id of j.tags) {
+  for (const j of journal) for (const id of j.tags.filter(id => content.byId[id])) {
     (photos[id] ||= []).push({ src: blobURL(j.photo), mine: true, caption: j.address ? `Seen by you · ${j.address}` : `Seen by you · ${new Date(j.createdAt).toLocaleDateString()}`, entry: j.id });
   }
 }
@@ -191,13 +194,13 @@ async function viewReview() {
     if (p.kind === 'pickName' || p.kind === 'pair') {
       const ask = p.kind === 'pair' ? 'Which is it?' : t.deck === 'architects' ? 'Who designed this?' : t.deck === 'styles' ? 'What style is this?' : 'What’s this called?';
       app.innerHTML = `${top()}<article class="card">${photoBlock(p.photo)}<div class="body"><p class="ask">${ask}</p>
-        <div class="choices">${p.choices.map(c => `<button data-id="${c.id}">${esc(c.term)}</button>`).join('')}</div><div id="ans"></div></div></article>`;
+        <div class="choices">${p.choices.map(c => `<button data-id="${esc(c.id)}">${esc(c.term)}</button>`).join('')}</div><div id="ans"></div></div></article>`;
       barInner.innerHTML = '';
       app.querySelectorAll('.choices button').forEach(b => b.onclick = () => answered(b.dataset.id === t.id, b));
     }
     if (p.kind === 'pickPhoto') {
       app.innerHTML = `${top()}<article class="card"><div class="body"><p class="ask">Tap the</p><p class="term">${esc(t.term)}</p></div>
-        <div class="tiles">${p.tiles.map(x => `<button data-id="${x.term.id}"><img src="${esc(x.photo.src)}" alt=""></button>`).join('')}</div><div class="body" id="ans" style="padding-top:0"></div></article>`;
+        <div class="tiles">${p.tiles.map(x => `<button data-id="${esc(x.term.id)}"><img src="${esc(x.photo.src)}" alt=""></button>`).join('')}</div><div class="body" id="ans" style="padding-top:0"></div></article>`;
       barInner.innerHTML = '';
       app.querySelectorAll('.tiles button').forEach(b => b.onclick = () => answered(b.dataset.id === t.id, b));
     }
@@ -225,7 +228,7 @@ async function viewReview() {
 
 function termRow(t) {
   const thumb = photos[t.id]?.find(p => !p.mine)?.src || photos[t.id]?.[0]?.src;
-  return `<li><a href="#/term/${t.id}">${thumb ? `<img class="thumb" src="${esc(thumb)}" alt="" loading="lazy">` : '<span class="thumb"></span>'}<span style="min-width:0"><span class="t">${esc(t.term)}</span><span class="m">${esc(t.era || t.def)}</span></span><span class="dot ${status(t.id)}"></span></a></li>`;
+  return `<li><a href="#/term/${esc(t.id)}">${thumb ? `<img class="thumb" src="${esc(thumb)}" alt="" loading="lazy">` : '<span class="thumb"></span>'}<span style="min-width:0"><span class="t">${esc(t.term)}</span><span class="m">${esc(t.era || t.def)}</span></span><span class="dot ${status(t.id)}"></span></a></li>`;
 }
 
 function viewGlossary() {
@@ -236,7 +239,7 @@ function viewGlossary() {
   const results = document.getElementById('results');
   const decksHTML = `<h3>Decks</h3><div class="deckgrid">${content.decks.map(d => {
     const cover = content.byDeck[d.id].find(t => t.img);
-    return `<a href="#/deck/${d.id}">${cover ? `<img src="${esc(cover.img)}" alt="" loading="lazy">` : ''}<span>${esc(d.name)}<small>${content.byDeck[d.id].length} terms</small></span></a>`;
+    return `<a href="#/deck/${esc(d.id)}">${cover ? `<img src="${esc(cover.img)}" alt="" loading="lazy">` : ''}<span>${esc(d.name)}<small>${content.byDeck[d.id].length} terms</small></span></a>`;
   }).join('')}</div>`;
   const show = () => {
     const s = document.getElementById('q').value.trim().toLowerCase();
@@ -263,16 +266,16 @@ function viewTerm(id) {
   const c = cards[id];
   const mine = (photos[id] || []).filter(p => p.mine);
   const st = !c ? 'Not introduced yet.' : `${isLearned(c.card) ? 'Learned' : 'Learning'} · next review in ${humanInterval(c.card.due)}`;
-  app.innerHTML = `<a class="back" href="#/deck/${t.deck}">‹ ${esc(content.deckName[t.deck])}</a>
+  app.innerHTML = `<a class="back" href="#/deck/${esc(t.deck)}">‹ ${esc(content.deckName[t.deck])}</a>
     <article class="card">${t.img ? `<div class="photo"><img src="${esc(t.img)}" alt=""></div>` : ''}<div class="body">
       <p class="term">${esc(t.term)}</p>${t.era ? `<p class="era">${esc(t.era)}</p>` : ''}
       <p class="def">${esc(t.def)}</p><p class="spot">${esc(t.spot)}</p>
       <div class="ex"><span class="eyebrow">In New York</span><ul>${t.ex.map(e => `<li>${esc(e)}</li>`).join('')}</ul></div>
-      ${t.confuse?.length ? `<h3>Don’t confuse with</h3><div class="chips">${t.confuse.map(cid => `<a class="chip" href="#/term/${cid}">${esc(content.byId[cid].term)}</a>`).join('')}</div>` : ''}
+      ${t.confuse?.length ? `<h3>Don’t confuse with</h3><div class="chips">${t.confuse.map(cid => `<a class="chip" href="#/term/${esc(cid)}">${esc(content.byId[cid].term)}</a>`).join('')}</div>` : ''}
       ${credit(t)}
     </div></article>
     <h3>Your sightings</h3>
-    ${mine.length ? `<div class="seen">${mine.map(p => `<a href="#/journal/${p.entry}"><img src="${esc(p.src)}" alt=""></a>`).join('')}</div>` : `<p class="small muted">None yet. <a href="#/journal/new?tag=${id}">Add one</a></p>`}
+    ${mine.length ? `<div class="seen">${mine.map(p => `<a href="#/journal/${esc(p.entry)}"><img src="${esc(p.src)}" alt=""></a>`).join('')}</div>` : `<p class="small muted">None yet. <a href="#/journal/new?tag=${esc(id)}">Add one</a></p>`}
     <p class="status" style="margin-top:20px">${st}</p>
     ${c ? '' : `<button class="btn block" id="learn" style="margin-top:8px">Add to next review</button>`}`;
   document.getElementById('learn')?.addEventListener('click', async () => {
@@ -292,16 +295,16 @@ async function addPriority(ids) {
 let journalMode = 'date';
 function viewJournal() {
   const fab = `<a class="fab" href="#/journal/new" aria-label="Add a sighting"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></a>`;
-  const tile = j => `<a href="#/journal/${j.id}"><img src="${esc(blobURL(j.thumb))}" alt="" loading="lazy"><p class="t">${esc(j.address || j.tags.map(id => content.byId[id]?.term).filter(Boolean).join(', ') || 'Untitled')}</p><p class="m">${new Date(j.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}</p></a>`;
+  const tile = j => `<a href="#/journal/${esc(j.id)}"><img src="${esc(blobURL(j.thumb))}" alt="" loading="lazy"><p class="t">${esc(j.address || j.tags.map(id => content.byId[id]?.term).filter(Boolean).join(', ') || 'Untitled')}</p><p class="m">${new Date(j.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}</p></a>`;
   let body;
   if (!journal.length) body = `<div class="empty"><p>Photograph a building you see at a showing and tag the features you can name.</p><p>Your photos then show up in your reviews.</p><p><a class="btn primary" href="#/journal/new">Add your first sighting</a></p></div>`;
   else if (journalMode === 'date') body = `<div class="jgrid">${journal.map(tile).join('')}</div>`;
   else {
     const group = journalMode === 'style' ? t => t.deck === 'styles' : t => t.deck !== 'styles';
-    const byTerm = {};
+    const byTerm = dict();
     for (const j of journal) for (const id of j.tags) if (content.byId[id] && group(content.byId[id])) (byTerm[id] ||= []).push(j);
     const ids = Object.keys(byTerm).sort((a, b) => byTerm[b].length - byTerm[a].length || content.byId[a].term.localeCompare(content.byId[b].term));
-    body = ids.length ? ids.map(id => `<h3><a href="#/term/${id}" style="color:inherit;text-decoration:none">${esc(content.byId[id].term)} · ${byTerm[id].length}</a></h3><div class="jgrid">${byTerm[id].map(tile).join('')}</div>`).join('')
+    body = ids.length ? ids.map(id => `<h3><a href="#/term/${esc(id)}" style="color:inherit;text-decoration:none">${esc(content.byId[id].term)} · ${byTerm[id].length}</a></h3><div class="jgrid">${byTerm[id].map(tile).join('')}</div>`).join('')
       : `<p class="empty">No sightings tagged with a ${journalMode === 'style' ? 'style' : 'term'} yet.</p>`;
   }
   app.innerHTML = `<header class="top"><p class="eyebrow">${journal.length} sighting${journal.length === 1 ? '' : 's'}</p><h1>Journal</h1></header>
@@ -323,14 +326,14 @@ function tagPicker(el, tags, onChange) {
   el.innerHTML = `<input class="search" type="search" placeholder="Search: cornice, oriel, Italianate…" autocomplete="off"><ul class="suggest" hidden></ul><div class="chips tagged"></div>`;
   const input = el.querySelector('input'), list = el.querySelector('.suggest'), chips = el.querySelector('.tagged');
   const draw = () => {
-    chips.innerHTML = tags.map(id => `<button class="chip" data-id="${id}" type="button">${esc(content.byId[id].term)} ✕</button>`).join('');
+    chips.innerHTML = tags.map(id => `<button class="chip" data-id="${esc(id)}" type="button">${esc(content.byId[id].term)} ✕</button>`).join('');
     chips.querySelectorAll('button').forEach(b => b.onclick = () => { tags.splice(tags.indexOf(b.dataset.id), 1); draw(); onChange?.(); });
   };
   input.oninput = () => {
     const s = input.value.trim().toLowerCase();
     const hits = s ? content.terms.filter(t => !tags.includes(t.id) && t.term.toLowerCase().includes(s)).slice(0, 6) : [];
     list.hidden = !hits.length;
-    list.innerHTML = hits.map(t => `<li><button type="button" data-id="${t.id}">${esc(t.term)}<small>${esc(content.deckName[t.deck])}</small></button></li>`).join('');
+    list.innerHTML = hits.map(t => `<li><button type="button" data-id="${esc(t.id)}">${esc(t.term)}<small>${esc(content.deckName[t.deck])}</small></button></li>`).join('');
     list.querySelectorAll('button').forEach(b => b.onclick = () => { tags.push(b.dataset.id); input.value = ''; list.hidden = true; draw(); onChange?.(); input.focus(); });
   };
   draw();
@@ -391,7 +394,7 @@ function viewEntry(id) {
 /* ---------- Settings ---------- */
 
 async function viewSettings() {
-  const n = await db.getSetting('newPerDay', 5);
+  const n = Math.max(0, Math.min(30, Math.round(Number(await db.getSetting('newPerDay', 5))) || 0));
   const lastBackup = await db.getSetting('lastBackup', null);
   const persisted = await navigator.storage?.persisted?.();
   const est = await navigator.storage?.estimate?.();
@@ -425,7 +428,7 @@ async function viewSettings() {
     const f = e.target.files[0];
     if (!f || !confirm('Replace everything on this phone with this backup?')) return;
     try {
-      await db.importAll(JSON.parse(await f.text()));
+      await db.importAll(JSON.parse(await f.text()), new Set(content.terms.map(t => t.id)));
       await refresh();
       toast('Restored');
       viewSettings();
